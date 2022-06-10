@@ -17,7 +17,21 @@
                          "footer";
 }
 
+
+
+/*Animacion para el desafio, hover: color y footer en redes sociales */
+
+header nav a:hover {
+    color: rgb(255, 46, 151);
+}
+
+.info-redes:hover {
+    color: rgb(255, 46, 151);
+}
+
+
 /*Index*/
+
 
 body .contenedor {
     padding-top: 20px;
@@ -53,9 +67,7 @@ header nav a {
     color: white;
 }
 
-header nav a:hover {
-    color: rgb(188, 151, 222);
-}
+
 
 header nav ul li {
     list-style: none;
@@ -959,6 +971,29 @@ footer {
             grid-area: footer;
         }
     }
+
+
+    /*Productos Aplicando Boostrap*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     /* Envios */

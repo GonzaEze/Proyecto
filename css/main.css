@@ -1,0 +1,1421 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*INDEX Grid*/
+.contedor-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas: "header"
+                         "main"
+                         "section-sobrenosotros"
+                         "section-productos"
+                         "section.extra"
+                         "footer";
+}
+
+/*Index*/
+
+body .contenedor {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+header {
+    height: 100px;
+    background-color: rgb(0, 0, 0);
+    grid-area: header;
+    
+}
+
+header .p-logo {
+    padding-left: 20px;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.9rem;
+    font-weight: bold;
+    color: white;  
+}
+    
+
+header nav ul {
+    display: flex;
+    padding-right: 20px ;
+}
+
+header nav a {
+    text-decoration: none;
+    color: white;
+}
+
+header nav a:hover {
+    color: rgb(188, 151, 222);
+}
+
+header nav ul li {
+    list-style: none;
+    padding: 10px;
+    margin: 3px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+    border: 2px solid white;
+}
+
+.main-fondo-home {
+    height: 560px;
+    background-image: linear-gradient(
+    0deg,
+    rgba(0,0,0,0.7),
+    rgba(0,0,0,0.7) ),url(../img/home.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-area: main;
+    padding-top: 250px;
+}
+
+main .main-eslogan {
+    color: white;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    padding: 10px;
+    font-size: 1.7rem;
+}
+
+main form {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+main form button {
+    background-color: blueviolet;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+}
+
+main form button:hover{
+   color: rgb(188, 151, 222);;
+}
+
+
+.section-sobrenosotros {
+    height: 400px;
+    background-color: rgb(245, 245, 245);
+    grid-area: section-sobrenosotros;
+    padding-top: 50px;
+    text-align: center;
+}
+
+section .h2-sobrenosotros {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5rem;
+}
+
+
+section .p-sobrenosotros {
+    padding: 35px 30px;
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 1.2rem;
+}
+
+section form {
+    padding-top: 5px;
+}
+
+section form button {
+    background-color: blueviolet;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+}
+
+section form button:hover {
+    color: rgb(181, 131, 232);
+}
+
+.section-productos {
+    height: 550px;
+    grid-area: section-productos;
+    background-color: rgb(26, 26, 26);
+    text-align: center;
+    color: white;
+}
+
+.section-productos .h2-productos {
+    padding-top: 50px;
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.section-productos .contenedor-cartas {
+  display: flex;
+  flex-direction: row;
+  padding: 40px 15px;
+}
+
+.carta-uno {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5) ), url(../img/Antireflex.jpg);
+    padding: 25px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 10px;
+    border-radius: 15px;
+
+}
+
+.carta-dos {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5) ), url(../img/luzazul.jpg);
+    padding: 25px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 10px;
+    border-radius: 15px;
+}
+
+
+.carta-tres {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5) ), url(../img/Fotocromados.png);
+    padding: 25px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 10px;
+    border-radius: 15px;
+}
+
+.section-productos .contenedor-cartas h3 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.section-productos .contenedor-cartas p {
+    padding: 15px;
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: bold;
+}
+
+
+.section-extra {
+    height: 400px;
+    background-color: rgb(248, 236, 222);
+    grid-area: section-extra;
+    padding: 15px;
+    text-align: center;
+}
+
+.section-extra .h2-extra {
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+    font-size:  2.5rem;
+    text-transform: uppercase;
+}
+
+.section-extra .section-extra-contenido {
+    font-size: 1.5rem;
+    padding: 15px 30px;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+.section-extra form {
+    padding-top: 15px;
+}
+
+
+footer {
+    font-family: 'Roboto', sans-serif;
+    height: 130px;
+    padding: 15px;
+    background-color: rgb(54, 53, 53);
+    text-align: center;
+    grid-area: footer;
+    color: white;
+    display: relative;
+}
+
+/*media query Mobile Index*/
+
+@media screen and (max-width: 600px) {
+
+    .contedor-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+     grid-template-rows: repeat(6, auto);
+        grid-template-areas: "header"
+                             "main"
+                             "section-sobrenosotros"
+                             "section-productos"
+                             "section.extra"
+                             "footer";
+    }
+      
+    body .contenedor {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header {
+        height: 300px;
+        background-color: rgb(0, 0, 0);
+        grid-area: header;
+        
+    }
+    
+    header .p-logo {
+        padding: 10px 0;
+        text-align: center;
+        font-family: 'Lato', sans-serif;
+        font-size: 1.9rem;
+        font-weight: bold;
+        color: white;  
+    }
+        
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        
+    }
+    
+    header nav a {
+        text-decoration: none;
+        color: white;
+    }
+    
+    header nav a:hover {
+        color: rgb(188, 151, 222);
+    }
+    
+    header nav ul li {
+        list-style: none;
+        padding: 10px 2px;
+        margin: 0px;
+        border-radius: 0;
+        font-size: 1.2rem;
+        font-family: 'Roboto', sans-serif;
+        border: 0;
+    }
+    
+    .main-fondo-home {
+        height: 560px;
+        background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.7) ),url(../img/home.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        grid-area: main;
+        padding-top: 200px;
+    }
+    
+    main .main-eslogan {
+        color: white;
+        text-align: center;
+        font-family: 'Lato', sans-serif;
+        padding: 20px;
+        font-size: 1.7em;
+    }
+    
+    main form {
+        display: flex;
+        justify-content: center;
+        padding-top: 50px;
+    }
+    
+    main form button {
+        background-color: blueviolet;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 1.5rem;
+        color: white;
+        font-family: 'Rubik', sans-serif;
+    }
+    
+    main form button:hover{
+       color: rgb(188, 151, 222);;
+    }
+    
+    
+    .section-sobrenosotros {
+        height: 550px;
+        background-color: rgb(245, 245, 245);
+        grid-area: section-sobrenosotros;
+        padding-top: 50px;
+        text-align: center;
+    }
+    
+    section .h2-sobrenosotros {
+        font-family: 'Roboto', sans-serif;
+        font-size: 2rem;
+    }
+    
+    
+    section .p-sobrenosotros {
+        padding: 35px 30px;
+        font-family: 'Libre Franklin', sans-serif;
+        font-size: 1.2rem;
+    }
+    
+    section form {
+        padding-top: 5px;
+    }
+    
+    section form button {
+        background-color: blueviolet;
+        padding: 15px;
+        border-radius: 10px;
+        font-size: 1.5rem;
+        color: white;
+        font-family: 'Rubik', sans-serif;
+    }
+    
+    section form button:hover {
+        color: rgb(181, 131, 232);
+    }
+    
+    .section-productos {
+        height: 700px;
+        grid-area: section-productos;
+        background-color: rgb(26, 26, 26);
+        text-align: center;
+        color: white;
+    }
+    
+    .section-productos .h2-productos {
+        padding-top: 50px;
+        font-family: 'Libre Franklin', sans-serif;
+        font-size: 2rem;
+        text-transform: uppercase;
+    }
+    
+    .section-productos .contenedor-cartas {
+     display: flex;
+     flex-direction: column;
+     padding: 10px 15px;
+    }
+    
+    
+    
+    .carta-uno {
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5) ), url(../img/Antireflex.jpg);
+        padding: 70px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 10px;
+        border-radius: 15px;
+    
+    }
+    
+    .carta-dos {
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5) ), url(../img/luzazul.jpg);
+        padding: 70px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 10px;
+        border-radius: 15px;
+    }
+    
+    
+    .carta-tres {
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5) ), url(../img/Fotocromados.png);
+        padding: 70px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 10px;
+        border-radius: 15px;
+    }
+    
+    .section-productos .contenedor-cartas h3 {
+        font-family: 'Rubik', sans-serif;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    
+    .section-productos .contenedor-cartas p {
+        display: none;
+    }
+    
+    
+    .section-extra {
+        height: 550px;
+        background-color: rgb(248, 236, 222);
+        grid-area: section-extra;
+        padding: 15px;
+        text-align: center;
+    }
+    
+    .section-extra .h2-extra {
+        font-family: 'Roboto', sans-serif;
+        padding-top: 20px;
+        font-size:  2rem;
+        text-transform: uppercase;
+    }
+    
+    .section-extra .section-extra-contenido {
+        font-size: 1.2rem;
+        padding: 15px 30px;
+        font-family: 'Libre Franklin', sans-serif;
+    }
+    
+    .section-extra form {
+        padding-top: 15px;
+    }
+    
+    
+    footer {
+        font-family: 'Roboto', sans-serif;
+        height: 130px;
+        padding: 15px;
+        background-color: rgb(54, 53, 53);
+        text-align: center;
+        grid-area: footer;
+        color: white;
+        display: relative;
+    }
+}
+
+/*media query Tablet Index*/
+
+ @media screen and (min-width: 600px) and (max-width: 1200px) {
+
+        .contedor-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, auto);
+            grid-template-areas: "header"
+                                 "main"
+                                 "section-sobrenosotros"
+                                 "section-productos"
+                                 "section.extra"
+                                 "footer";
+        }
+          
+        body .contenedor {
+            display: flex;
+            flex-direction: column;
+           
+        }
+    
+        header {
+            height: 250px;
+            background-color: rgb(0, 0, 0);
+            grid-area: header;
+            
+        }
+        
+        header .p-logo {
+            padding: 10px 0;
+            text-align: center;
+            font-family: 'Lato', sans-serif;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: white;  
+        }
+            
+        header nav ul {
+            padding-top: 40px;
+            display: flex;
+            text-align: center;
+        }
+        
+        header nav a {
+            display: flex;
+            text-decoration: none;
+            color: white;
+        }
+        
+        header nav a:hover {
+            color: rgb(188, 151, 222);
+        }
+        
+        header nav ul li {
+            display: flex;
+            text-align: center;
+            list-style: none;
+            padding: 15px 5px;
+            margin: 2px;
+            border-radius: 10px;
+            font-size: 1.4rem;
+            font-family: 'Roboto', sans-serif;
+            border: 0;
+        }
+        
+        .main-fondo-home {
+            height: 800px;
+            background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.7),
+            rgba(0,0,0,0.7) ),url(../img/home.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            grid-area: main;
+            padding-top: 300px;
+        }
+        
+        main .main-eslogan {
+            color: white;
+            text-align: center;
+            font-family: 'Lato', sans-serif;
+            padding: 50px;
+            font-size: 1.9em;
+        }
+        
+        main form {
+            display: flex;
+            justify-content: center;
+            padding-top: 50px;
+        }
+        
+        main form button {
+            background-color: blueviolet;
+            padding: 25px;
+            text-transform: uppercase;
+            border-radius: 10px;
+            font-size: 2.3rem;
+            color: white;
+            font-family: 'Rubik', sans-serif;
+        }
+        
+        main form button:hover{
+           color: rgb(188, 151, 222);;
+        }
+        
+        
+        .section-sobrenosotros {
+            height: 700px;
+            background-color: rgb(245, 245, 245);
+            grid-area: section-sobrenosotros;
+            padding-top: 100px;
+            text-align: center;
+        }
+        
+        section .h2-sobrenosotros {
+            font-family: 'Roboto', sans-serif;
+            font-size: 2.5rem;
+        }
+        
+        
+        section .p-sobrenosotros {
+            padding: 35px 30px;
+            font-family: 'Libre Franklin', sans-serif;
+            font-size: 1.5rem;
+        }
+        
+        section form {
+            padding-top: 5px;
+        }
+        
+        section form button {
+            background-color: blueviolet;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 2.3rem;
+            color: white;
+            font-family: 'Rubik', sans-serif;
+        }
+        
+        section form button:hover {
+            color: rgb(181, 131, 232);
+        }
+        
+        .section-productos {
+            height: 1000px;
+            grid-area: section-productos;
+            background-color: rgb(26, 26, 26);
+            text-align: center;
+            color: white;
+        }
+        
+        .section-productos .h2-productos {
+            padding-top: 50px;
+            font-family: 'Libre Franklin', sans-serif;
+            font-size: 2rem;
+            text-transform: uppercase;
+        }
+        
+        .section-productos .contenedor-cartas {
+         display: flex;
+         flex-direction: column;
+         padding: 10px 15px;
+        }
+        
+        
+        .carta-uno {
+            background-image: linear-gradient(
+                0deg,
+                rgba(0,0,0,0.5),
+                rgba(0,0,0,0.5) ), url(../img/Antireflex.jpg);
+            padding: 100px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 25px 10px;
+            border-radius: 15px;
+        
+        }
+        
+        .carta-dos {
+            background-image: linear-gradient(
+                0deg,
+                rgba(0,0,0,0.5),
+                rgba(0,0,0,0.5) ), url(../img/luzazul.jpg);
+            padding: 100px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 25px 10px;
+            border-radius: 15px;
+        }
+        
+        
+        .carta-tres {
+            background-image: linear-gradient(
+                0deg,
+                rgba(0,0,0,0.5),
+                rgba(0,0,0,0.5) ), url(../img/Fotocromados.png);
+            padding: 100px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 25px 10px;
+            border-radius: 15px;
+        }
+        
+        .section-productos .contenedor-cartas h3 {
+            font-family: 'Rubik', sans-serif;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        
+        .section-productos .contenedor-cartas p {
+            display: none;
+        }
+        
+        
+        .section-extra {
+            height: 550px;
+            background-color: rgb(248, 236, 222);
+            grid-area: section-extra;
+            padding: 25px;
+            text-align: center;
+        }
+        
+        .section-extra .h2-extra {
+            font-family: 'Roboto', sans-serif;
+            padding: 20px 0px;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+        }
+        
+        .section-extra .section-extra-contenido {
+            font-size: 1.5rem;
+            padding: 10px 30px;
+            font-family: 'Libre Franklin', sans-serif;
+        }
+        
+        .section-extra form {
+            padding-top: 15px;
+        }
+        
+        
+        footer {
+            font-family: 'Roboto', sans-serif;
+            height: 130px;
+            padding: 15px;
+            background-color: rgb(54, 53, 53);
+            text-align: center;
+            grid-area: footer;
+            color: white;
+            display: relative;
+        }
+    }
+ 
+
+
+
+/* Sobre Nosotros Grid */
+    
+    .contenedor-grid-sobrenosotros {
+        
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: "header header header"
+                             "main main img-sobrenosotros"
+                             "contenedor-imagenes contenedor-imagenes contenedor-imagenes"
+                             "footer footer footer";
+    }
+
+
+    header {
+        grid-area: header;
+        
+    }
+
+    main{
+        height: 247px;
+        grid-area: main;
+    }
+
+    
+    main .h1-sobrenosotros {
+        font-family: 'Roboto', sans-serif;
+        font-size: 2rem;
+        text-align: center;
+        padding-top: 25px;
+    }
+
+     .main-sobrenosotros p {
+        padding: 10px 20px;
+        font-family: 'Libre Franklin', sans-serif;
+    }
+
+
+    .img-sobrenosotros img{
+        height: 200px;
+        padding-top: 25px;
+        margin: 0px 25px ;
+        grid-area: img-sobrenosotros;
+    }
+
+    .contenedor-imagenes {
+        height: 150px;
+        display: flex;
+        justify-content: space-evenly;
+        background-color: rgb(55, 253, 187);
+        grid-area: contenedor-imagenes;
+    }
+
+    .contenedor-imagenes .img-trabajadores {
+        height: 100px ;
+        display: flex;
+        padding-top: 10px;
+    }
+
+    footer {
+        grid-area: footer;
+    }
+
+    /*media query Mobile Sobre Nosotros*/
+
+    @media screen and (max-width:600px) {
+
+        .contenedor-grid-sobrenosotros {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(5, auto);
+            grid-template-areas: "header"
+                                 "main"
+                                 "img-sobrenosotros"
+                                 "contenedor-imagenes"
+                                 "footer";
+        }
+    
+        header {
+            grid-area: header;
+            
+        }
+    
+        main{
+            height: 494px;
+            grid-area: main;
+        }
+    
+        main .h1-sobrenosotros {
+            font-family: 'Roboto', sans-serif;
+            font-size: 2rem;
+            text-align: center;
+            padding: 50px 30px;
+        }
+    
+         .main-sobrenosotros p {
+            padding: 20px 30px;
+            text-align: justify;
+            font-family: 'Libre Franklin', sans-serif;
+        }
+    
+    
+        .img-sobrenosotros img{
+            display: none;
+            
+        }
+    
+        .contenedor-imagenes {
+            background-image: url(../img/fondo1.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: rgb(55, 253, 187);
+            grid-area: contenedor-imagenes;
+        }
+    
+        .contenedor-imagenes .img-trabajadores {
+            display: none;
+        }
+    
+        footer {
+            grid-area: footer;
+        }
+        
+    }
+
+    /*media query Tablet Sobre Nosotros*/
+
+    @media screen and (min-width:600px) and (max-width: 1200px) {
+
+        .contenedor-grid-sobrenosotros {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(5, auto);
+            grid-template-areas: "header"
+                                 "main"
+                                 "img-sobrenosotros"
+                                 "contenedor-imagenes"
+                                 "footer";
+        }
+    
+    
+        header {
+            grid-area: header;
+            
+        }
+    
+        main{
+
+            height: 550px;
+            grid-area: main;
+        }
+    
+        
+        main .h1-sobrenosotros {
+            font-family: 'Roboto', sans-serif;
+            font-size: 2rem;
+            text-align: center;
+            padding-top: 50px;
+        }
+    
+         .main-sobrenosotros p {
+            padding: 40px 50px;
+            font-family: 'Libre Franklin', sans-serif;
+            text-align: justify;
+            font-size: 1.2rem;
+        }
+    
+    
+        .img-sobrenosotros img{
+            display: none;
+        
+        }
+    
+        .contenedor-imagenes {
+            height: 216px;
+            background-color: rgb(55, 253, 187);
+            background-image: url(../img/fondo1.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            grid-area: contenedor-imagenes;
+        }
+    
+        .contenedor-imagenes .img-trabajadores {
+           display: none;
+
+        }
+    
+        footer {
+            grid-area: footer;
+        }
+    }
+
+
+    /* Envios */
+
+    .contenedor-grid-envios {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: "header header header"
+                             "main main main"
+                             "section-envios section-envios section-envios"
+                             "footer footer footer";
+    }
+
+    header {
+        grid-area: header;
+    }
+
+    main {
+        grid-area: main;
+    }
+
+    .contenedor-envios {
+        background-color: rgb(218, 255, 243);
+        height: 290px;
+    }
+
+   .contenedor-envios h1 {
+        font-family: 'Roboto', sans-serif;
+        font-size: 2rem;
+        text-align: center;
+        padding: 25px;
+    }
+
+    .contenedor-envios .envios1 {
+        font-family: 'Libre Franklin', sans-serif;
+        text-align: justify;
+        padding: 5px 25px;
+        
+    }
+
+    .contenedor-envios .envios2 {
+        font-family: 'Libre Franklin', sans-serif;
+        text-align: justify;
+        padding: 5px 25px;
+    }
+
+    .section-envios {
+        background-color: rgb(218, 255, 243);
+        display: flex;
+        flex-direction: column column;
+        grid-area: section-envios;
+    }
+
+    .section-envios .section1 {
+        font-family: 'Libre Franklin', sans-serif;
+        text-align: justify;
+        padding: 5px 25px;
+    }
+
+    .section-envios .section2 {
+        font-family: 'Libre Franklin', sans-serif;
+        text-align: justify;
+        padding: 5px 25px;
+    }
+
+
+    .section-envios img {
+        display: flex;
+        padding: 10px;
+        height: 100px;
+
+
+    }
+
+
+    footer {
+        grid-area: footer;
+    }
+
+
+   /*media query Mobile Sobre Nosotros*/
+
+   @media screen and (max-width:600px) {
+
+    .contenedor-grid-envios {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: "header"
+                             "main"
+                             "section-envios"
+                             "footer";
+    }
+
+    header {
+        grid-area: header;
+    }
+
+    main {
+        grid-area: main;
+    }
+
+    .contenedor-envios {
+        background-color: rgb(218, 255, 243);
+        height: 550px;
+    }
+
+   .contenedor-envios h1 {
+        font-family: 'Roboto', sans-serif;
+        font-size: 2rem;
+        text-align: center;
+        padding: 45px;
+    }
+
+    .contenedor-envios .envios1 {
+        font-family: 'Libre Franklin', sans-serif;
+        text-align: justify;
+        padding: 5px 25px;
+        
+    }
+
+    .contenedor-envios .envios2 {
+        font-family: 'Libre Franklin', sans-serif;
+        text-align: justify;
+        padding: 5px 25px;
+    }
+
+    .section-envios {
+        height: 550px;
+        background-color: rgb(218, 255, 243);
+        display: flex;
+        flex-direction: column;
+        grid-area: section-envios;
+    }
+
+    .section-envios .section1 {
+        font-family: 'Libre Franklin', sans-serif;
+        text-align: justify;
+        padding: 30px 25px;
+    }
+
+    .section-envios .section2 {
+        font-family: 'Libre Franklin', sans-serif;
+        text-align: justify;
+        padding: 35px 25px;
+    }
+
+
+    .section-envios img {
+        display: none;
+        padding: 10px;
+        height: 100px;
+
+    }
+
+
+    footer {
+        grid-area: footer;
+    }
+
+
+   }
+
+
+    @media screen and (min-width:600px) and (max-width: 1200px) {
+
+        .contenedor-grid-envios {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(4, auto);
+            grid-template-areas: "header"
+                                 "main"
+                                 "section-envios"
+                                 "footer";
+        }
+    
+        header {
+            grid-area: header;
+        }
+    
+        main {
+            grid-area: main;
+        }
+    
+        .contenedor-envios {
+            background-color: rgb(218, 255, 243);
+            height: 350px;
+        }
+    
+       .contenedor-envios h1 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 2rem;
+            text-align: center;
+            padding: 30px;
+        }
+    
+        .contenedor-envios .envios1 {
+            font-size: 1.2rem;
+            font-family: 'Libre Franklin', sans-serif;
+            text-align: justify;
+            padding: 5px 25px;
+            
+        }
+    
+        .contenedor-envios .envios2 {
+            font-size: 1.2rem;
+            font-family: 'Libre Franklin', sans-serif;
+            text-align: justify;
+            padding: 5px 25px;
+        }
+    
+        .section-envios {
+            height: 430px;
+            background-color: rgb(218, 255, 243);
+            display: flex;
+            flex-direction: column;
+            grid-area: section-envios;
+        }
+    
+        .section-envios .section1 {
+            font-size: 1.2rem;
+            font-family: 'Libre Franklin', sans-serif;
+            text-align: justify;
+            padding: 5px 25px;
+        }
+    
+        .section-envios .section2 {
+            font-size: 1.2rem;
+            font-family: 'Libre Franklin', sans-serif;
+            text-align: justify;
+            padding: 5px 25px;
+        }
+    
+        .section-envios img {
+            display: none;
+        }
+    
+    
+        footer {
+            grid-area: footer;
+        }
+    
+    }
+
+
+    /*Contacto*/
+
+    .contenedor-grid-contacto {
+
+        display: grid;
+        grid-template-columns: 3fr;
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: "header header header"
+                              "main main main"
+                              "footer footer footer";
+    }
+
+    header {
+        grid-area: header;
+
+    }
+
+     main { 
+         grid-area: main;
+     }
+
+    .formulario-contacto-principal {
+
+        background-color: antiquewhite;
+        height: 700px;
+    }
+
+   .formulario-contacto,textarea {
+        grid-area: formulario-contacto;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    main .formulario-contacto legend {
+        font-size: 2rem;
+        padding: 30px 15px;
+       
+    }
+
+    .formulario-contacto-style label {
+        display: flex;
+        flex-direction: column;
+        margin: 15px;
+        font-size: 1.5rem;
+    }
+
+    .formulario-contacto-style input, textarea {
+        text-align: center;
+        padding: 15px 15px;
+        background-color: rgb(212, 255, 255);
+    }
+
+    .formulario-contacto-buttons input {
+        background-color: rgb(127, 3, 243);
+        padding: 10px;
+        border-radius: 15px;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        color: white;
+        margin: 15px 5px;
+    }
+
+    .formulario-contacto-buttons input:hover {
+        color: rgb(222, 198, 244);
+    }
+
+    footer {
+        grid-area: footer;
+    }
+
+    /*media query Mobile Contacto*/
+
+    @media screen and (max-width:600px) {
+
+        .contenedor-grid-contacto {
+
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, auto);
+            grid-template-areas: "header"
+                                  "main"
+                                  "footer";
+        }
+    
+        header {
+            grid-area: header;
+    
+        }
+    
+         main { 
+             grid-area: main;
+         }
+    
+        .formulario-contacto-principal {
+    
+            background-color: antiquewhite;
+            height: 700px;
+        }
+    
+       .formulario-contacto,textarea {
+            grid-area: formulario-contacto;
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+        }
+    
+        main .formulario-contacto legend {
+            font-size: 2rem;
+            padding: 30px 15px;
+           
+        }
+    
+        .formulario-contacto-style label {
+            display: flex;
+            flex-direction: column;
+            margin: 15px;
+            font-size: 1.5rem;
+        }
+    
+        .formulario-contacto-style input, textarea {
+            text-align: center;
+            padding: 15px 15px;
+            background-color: rgb(212, 255, 255);
+        }
+    
+        .formulario-contacto-buttons input {
+            background-color: rgb(127, 3, 243);
+            padding: 10px;
+            border-radius: 15px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            color: white;
+            margin: 15px 5px;
+        }
+    
+        .formulario-contacto-buttons input:hover {
+            color: rgb(222, 198, 244);
+        }
+    
+        footer {
+            grid-area: footer;
+        }
+    }
+
+    /*media query Table Contacto*/
+
+    @media screen and (min-width:600px) and (max-width: 1200px) {
+
+        .contenedor-grid-contacto {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, auto);
+            grid-template-areas: "header"
+                                  "main"
+                                  "footer";
+        }
+    
+        header {
+            grid-area: header;
+    
+        }
+    
+         main { 
+             grid-area: main;
+         }
+    
+        .formulario-contacto-principal {
+    
+            background-color: antiquewhite;
+            height: 750px;
+        }
+    
+       .formulario-contacto,textarea {
+            grid-area: formulario-contacto;
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+        }
+    
+        main .formulario-contacto legend {
+            font-size: 2rem;
+            padding: 30px 15px;
+           
+        }
+    
+        .formulario-contacto-style label {
+            display: flex;
+            flex-direction: column;
+            margin: 15px;
+            font-size: 1.5rem;
+        }
+    
+        .formulario-contacto-style input, textarea {
+            text-align: center;
+            padding: 15px 15px;
+            background-color: rgb(212, 255, 255);
+        }
+    
+        .formulario-contacto-buttons input {
+            background-color: rgb(127, 3, 243);
+            padding: 10px;
+            border-radius: 15px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            color: white;
+            margin: 15px 5px;
+        }
+    
+        .formulario-contacto-buttons input:hover {
+            color: rgb(222, 198, 244);
+        }
+    
+        footer {
+            grid-area: footer;
+        }
+    }

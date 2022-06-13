@@ -975,10 +975,21 @@ footer {
 
     /*Productos Aplicando Boostrap*/
 
+    .header-boostrap {
+        
+    }
 
 
+    .main-boostrap {
+        background-color: rgb(228, 213, 194);
+        height: auto;
+        margin: 0;
+    }
 
-
+    .footer-boostrap {
+        
+    }
+        
 
 
 

@@ -975,22 +975,29 @@ footer {
 
     /*Productos Aplicando Boostrap*/
 
+        .header-boostrap {
+            height: 200px;
+        }
+
+
         .font-boostrap{
+            
             font-family: 'Lato', sans-serif;
             padding-left: 20px;
             font-size: 1.9rem;
-            font-weight: bold;
+            font-weight: bold;  
+            
         }
 
         .bg-color{
             background-color: antiquewhite;
-            height: auto;
-            
+            height: auto; 
         }
 
         .bg-h1 {
             background-color: rgb(35, 34, 34);
             text-align: center;
+           
 
         }
 

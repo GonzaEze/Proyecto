@@ -17,8 +17,6 @@
                          "footer";
 }
 
-
-
 /*Animacion para el desafio, hover: color y footer en redes sociales */
 
 header .nav-config a:hover {
@@ -798,7 +796,7 @@ footer {
     }
 
     main{
-        height: 247px;
+        height: 300px;
         grid-area: main;
     }
 
@@ -862,7 +860,7 @@ footer {
         }
     
         main{
-            height: 494px;
+            height: 700px;
             grid-area: main;
         }
     
@@ -927,7 +925,7 @@ footer {
     
         main{
 
-            height: 550px;
+            height: 700px;
             grid-area: main;
         }
     

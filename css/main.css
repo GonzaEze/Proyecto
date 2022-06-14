@@ -21,7 +21,7 @@
 
 /*Animacion para el desafio, hover: color y footer en redes sociales */
 
-header nav a:hover {
+header .nav-config a:hover {
     color: rgb(255, 46, 151);
 }
 
@@ -57,19 +57,19 @@ header .p-logo {
 }
     
 
-header nav ul {
+header .nav-config ul {
     display: flex;
     padding-right: 20px ;
 }
 
-header nav a {
+header .nav-config a {
     text-decoration: none;
     color: white;
 }
 
 
 
-header nav ul li {
+header .nav-config ul li {
     list-style: none;
     padding: 10px;
     margin: 3px;
@@ -273,7 +273,7 @@ footer {
     .contedor-grid {
         display: grid;
         grid-template-columns: 1fr;
-     grid-template-rows: repeat(6, auto);
+        grid-template-rows: repeat(6, auto);
         grid-template-areas: "header"
                              "main"
                              "section-sobrenosotros"
@@ -304,23 +304,23 @@ footer {
         color: white;  
     }
         
-    header nav ul {
+    header .nav-config ul {
         display: flex;
         flex-direction: column;
         text-align: center;
         
     }
     
-    header nav a {
+    header .nav-config a {
         text-decoration: none;
         color: white;
     }
     
-    header nav a:hover {
+    header .nav-config a:hover {
         color: rgb(188, 151, 222);
     }
     
-    header nav ul li {
+    header .nav-config ul li {
         list-style: none;
         padding: 10px 2px;
         margin: 0px;
@@ -525,7 +525,7 @@ footer {
         .contedor-grid {
             display: grid;
             grid-template-columns: 1fr;
-        grid-template-rows: repeat(6, auto);
+            grid-template-rows: repeat(6, auto);
             grid-template-areas: "header"
                                  "main"
                                  "section-sobrenosotros"
@@ -556,23 +556,23 @@ footer {
             color: white;  
         }
             
-        header nav ul {
+        header .nav-config ul {
             padding-top: 40px;
             display: flex;
             text-align: center;
         }
         
-        header nav a {
+        header .nav-config a {
             display: flex;
             text-decoration: none;
             color: white;
         }
         
-        header nav a:hover {
+        header .nav-config a:hover {
             color: rgb(188, 151, 222);
         }
         
-        header nav ul li {
+        header .nav-config ul li {
             display: flex;
             text-align: center;
             list-style: none;
@@ -975,19 +975,27 @@ footer {
 
     /*Productos Aplicando Boostrap*/
 
-        .header-boostrap {
-            height: 200px;
-        }
 
-
-        .font-boostrap{
-            
+        .header-boostrap p {
             font-family: 'Lato', sans-serif;
             padding-left: 20px;
             font-size: 1.9rem;
-            font-weight: bold;  
-            
+            font-weight: bold; 
+            padding-top: 25px ; 
+
         }
+
+        .nav-productos ul li {
+            list-style: none;
+            margin: 3px;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            font-family: 'Roboto', sans-serif;
+            border: 2px solid white; 
+        }
+
+
+
 
         .bg-color{
             background-color: antiquewhite;
@@ -995,6 +1003,8 @@ footer {
         }
 
         .bg-h1 {
+            padding: 20px;
+            margin-top: auto;
             background-color: rgb(35, 34, 34);
             text-align: center;
            
@@ -1005,6 +1015,60 @@ footer {
             height: 150px;
         }
         
+
+        @media screen and (max-width:600px) {
+
+            .header-boostrap p {
+                font-family: 'Lato', sans-serif;
+                padding-left: 20px;
+                font-size: 1.9rem;
+                font-weight: bold; 
+                padding-top: 125px ; 
+    
+            }
+
+            .nav-productos ul li {
+                list-style: none;
+                margin: 4px;
+                border-radius: none;
+                font-size: 1.5rem;
+                font-family: 'Roboto', sans-serif;
+                border: none; 
+            }
+
+        }
+
+
+        @media screen and (max-width:900px) {
+
+            .header-boostrap p {
+                font-family: 'Lato', sans-serif;
+                padding-left: 20px;
+                font-size: 1.9rem;
+                font-weight: bold; 
+                padding: 90px 50px  ; 
+    
+            }
+
+            .nav-productos ul li {
+                list-style: none;
+                margin: 4px;
+                border-radius: none;
+                font-size: 1.5rem;
+                font-family: 'Roboto', sans-serif;
+                border: none; 
+            }
+
+        }
+
+
+
+
+
+
+
+
+
 
     /* Envios */
 

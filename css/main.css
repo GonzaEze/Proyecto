@@ -17,16 +17,6 @@
                          "footer";
 }
 
-/*Animacion para el desafio, hover: color y footer en redes sociales */
-
-header .nav-config a:hover {
-    color: rgb(255, 46, 151);
-}
-
-.info-redes:hover {
-    color: rgb(255, 46, 151);
-}
-
 
 /*Index*/
 
@@ -54,27 +44,8 @@ header .p-logo {
     color: white;  
 }
     
-
-header .nav-config ul {
-    display: flex;
-    padding-right: 20px ;
-}
-
-header .nav-config a {
-    text-decoration: none;
-    color: white;
-}
-
-
-
-header .nav-config ul li {
-    list-style: none;
-    padding: 10px;
-    margin: 3px;
-    border-radius: 10px;
-    font-size: 1.2rem;
-    font-family: 'Roboto', sans-serif;
-    border: 2px solid white;
+header ul li:hover {
+    background: rgb(92, 27, 72);
 }
 
 .main-fondo-home {
@@ -118,10 +89,10 @@ main form button:hover{
 
 
 .section-sobrenosotros {
-    height: 400px;
+    height: 550px;
     background-color: rgb(245, 245, 245);
     grid-area: section-sobrenosotros;
-    padding-top: 50px;
+    padding-top: 80px;
     text-align: center;
 }
 
@@ -132,13 +103,13 @@ section .h2-sobrenosotros {
 
 
 section .p-sobrenosotros {
-    padding: 35px 30px;
+    padding: 60px 30px;
     font-family: 'Libre Franklin', sans-serif;
     font-size: 1.2rem;
 }
 
 section form {
-    padding-top: 5px;
+    padding-top: 15px;
 }
 
 section form button {
@@ -155,7 +126,7 @@ section form button:hover {
 }
 
 .section-productos {
-    height: 550px;
+    height: 1000px;
     grid-area: section-productos;
     background-color: rgb(26, 26, 26);
     text-align: center;
@@ -163,72 +134,15 @@ section form button:hover {
 }
 
 .section-productos .h2-productos {
-    padding-top: 50px;
+    padding: 10px;
     font-family: 'Libre Franklin', sans-serif;
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     text-transform: uppercase;
-}
-
-.section-productos .contenedor-cartas {
-  display: flex;
-  flex-direction: row;
-  padding: 40px 15px;
-}
-
-.carta-uno {
-    background-image: linear-gradient(
-        0deg,
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5) ), url(../img/Antireflex.jpg);
-    padding: 25px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin: 10px;
-    border-radius: 15px;
-
-}
-
-.carta-dos {
-    background-image: linear-gradient(
-        0deg,
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5) ), url(../img/luzazul.jpg);
-    padding: 25px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin: 10px;
-    border-radius: 15px;
-}
-
-
-.carta-tres {
-    background-image: linear-gradient(
-        0deg,
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5) ), url(../img/Fotocromados.png);
-    padding: 25px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin: 10px;
-    border-radius: 15px;
-}
-
-.section-productos .contenedor-cartas h3 {
-    font-family: 'Rubik', sans-serif;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-.section-productos .contenedor-cartas p {
-    padding: 15px;
-    font-family: 'Libre Franklin', sans-serif;
-    font-weight: bold;
 }
 
 
 .section-extra {
-    height: 400px;
+    height: 550px;
     background-color: rgb(248, 236, 222);
     grid-area: section-extra;
     padding: 15px;
@@ -237,19 +151,19 @@ section form button:hover {
 
 .section-extra .h2-extra {
     font-family: 'Roboto', sans-serif;
-    padding: 20px;
+    padding-top: 50px;
     font-size:  2.5rem;
     text-transform: uppercase;
 }
 
 .section-extra .section-extra-contenido {
     font-size: 1.5rem;
-    padding: 15px 30px;
+    padding: 50px 30px;
     font-family: 'Libre Franklin', sans-serif;
 }
 
 .section-extra form {
-    padding-top: 15px;
+    padding-top: 25px;
 }
 
 
@@ -292,40 +206,9 @@ footer {
         grid-area: header;
         
     }
-    
-    header .p-logo {
-        padding: 10px 0;
-        text-align: center;
-        font-family: 'Lato', sans-serif;
-        font-size: 1.9rem;
-        font-weight: bold;
-        color: white;  
-    }
-        
-    header .nav-config ul {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        
-    }
-    
-    header .nav-config a {
-        text-decoration: none;
-        color: white;
-    }
-    
+
     header .nav-config a:hover {
         color: rgb(188, 151, 222);
-    }
-    
-    header .nav-config ul li {
-        list-style: none;
-        padding: 10px 2px;
-        margin: 0px;
-        border-radius: 0;
-        font-size: 1.2rem;
-        font-family: 'Roboto', sans-serif;
-        border: 0;
     }
     
     .main-fondo-home {
@@ -406,7 +289,7 @@ footer {
     }
     
     .section-productos {
-        height: 700px;
+        height: 550px;
         grid-area: section-productos;
         background-color: rgb(26, 26, 26);
         text-align: center;
@@ -414,70 +297,12 @@ footer {
     }
     
     .section-productos .h2-productos {
-        padding-top: 50px;
+        padding: 20px;
         font-family: 'Libre Franklin', sans-serif;
         font-size: 2rem;
         text-transform: uppercase;
     }
-    
-    .section-productos .contenedor-cartas {
-     display: flex;
-     flex-direction: column;
-     padding: 10px 15px;
-    }
-    
-    
-    
-    .carta-uno {
-        background-image: linear-gradient(
-            0deg,
-            rgba(0,0,0,0.5),
-            rgba(0,0,0,0.5) ), url(../img/Antireflex.jpg);
-        padding: 70px;
-        background-size: cover;
-        background-repeat: no-repeat;
-        margin: 10px;
-        border-radius: 15px;
-    
-    }
-    
-    .carta-dos {
-        background-image: linear-gradient(
-            0deg,
-            rgba(0,0,0,0.5),
-            rgba(0,0,0,0.5) ), url(../img/luzazul.jpg);
-        padding: 70px;
-        background-size: cover;
-        background-repeat: no-repeat;
-        margin: 10px;
-        border-radius: 15px;
-    }
-    
-    
-    .carta-tres {
-        background-image: linear-gradient(
-            0deg,
-            rgba(0,0,0,0.5),
-            rgba(0,0,0,0.5) ), url(../img/Fotocromados.png);
-        padding: 70px;
-        background-size: cover;
-        background-repeat: no-repeat;
-        margin: 10px;
-        border-radius: 15px;
-    }
-    
-    .section-productos .contenedor-cartas h3 {
-        font-family: 'Rubik', sans-serif;
-        font-size: 1.2rem;
-        text-transform: uppercase;
-        font-weight: bold;
-    }
-    
-    .section-productos .contenedor-cartas p {
-        display: none;
-    }
-    
-    
+     
     .section-extra {
         height: 550px;
         background-color: rgb(248, 236, 222);
@@ -553,35 +378,7 @@ footer {
             font-weight: bold;
             color: white;  
         }
-            
-        header .nav-config ul {
-            padding-top: 40px;
-            display: flex;
-            text-align: center;
-        }
-        
-        header .nav-config a {
-            display: flex;
-            text-decoration: none;
-            color: white;
-        }
-        
-        header .nav-config a:hover {
-            color: rgb(188, 151, 222);
-        }
-        
-        header .nav-config ul li {
-            display: flex;
-            text-align: center;
-            list-style: none;
-            padding: 15px 5px;
-            margin: 2px;
-            border-radius: 10px;
-            font-size: 1.4rem;
-            font-family: 'Roboto', sans-serif;
-            border: 0;
-        }
-        
+              
         .main-fondo-home {
             height: 800px;
             background-image: linear-gradient(
@@ -661,7 +458,7 @@ footer {
         }
         
         .section-productos {
-            height: 1000px;
+            height: 750px;
             grid-area: section-productos;
             background-color: rgb(26, 26, 26);
             text-align: center;
@@ -669,71 +466,14 @@ footer {
         }
         
         .section-productos .h2-productos {
-            padding-top: 50px;
+            padding: 15px;
             font-family: 'Libre Franklin', sans-serif;
             font-size: 2rem;
             text-transform: uppercase;
         }
         
-        .section-productos .contenedor-cartas {
-         display: flex;
-         flex-direction: column;
-         padding: 10px 15px;
-        }
         
-        
-        .carta-uno {
-            background-image: linear-gradient(
-                0deg,
-                rgba(0,0,0,0.5),
-                rgba(0,0,0,0.5) ), url(../img/Antireflex.jpg);
-            padding: 100px;
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            margin: 25px 10px;
-            border-radius: 15px;
-        
-        }
-        
-        .carta-dos {
-            background-image: linear-gradient(
-                0deg,
-                rgba(0,0,0,0.5),
-                rgba(0,0,0,0.5) ), url(../img/luzazul.jpg);
-            padding: 100px;
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            margin: 25px 10px;
-            border-radius: 15px;
-        }
-        
-        
-        .carta-tres {
-            background-image: linear-gradient(
-                0deg,
-                rgba(0,0,0,0.5),
-                rgba(0,0,0,0.5) ), url(../img/Fotocromados.png);
-            padding: 100px;
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            margin: 25px 10px;
-            border-radius: 15px;
-        }
-        
-        .section-productos .contenedor-cartas h3 {
-            font-family: 'Rubik', sans-serif;
-            font-size: 1.2rem;
-            text-transform: uppercase;
-            font-weight: bold;
-        }
-        
-        .section-productos .contenedor-cartas p {
-            display: none;
-        }
-        
+
         
         .section-extra {
             height: 550px;
@@ -796,7 +536,7 @@ footer {
     }
 
     main{
-        height: 300px;
+        height: 500px;
         grid-area: main;
     }
 
@@ -805,24 +545,32 @@ footer {
         font-family: 'Roboto', sans-serif;
         font-size: 2rem;
         text-align: center;
-        padding-top: 25px;
+        padding-top: 50px;
     }
 
      .main-sobrenosotros p {
-        padding: 10px 20px;
+        padding: 75px 50px;
         font-family: 'Libre Franklin', sans-serif;
+        font-weight: bold;
     }
 
 
     .img-sobrenosotros img{
         height: 200px;
-        padding-top: 25px;
-        margin: 0px 25px ;
+        padding-bottom: 10px;
+        margin: 200px 25px ;
         grid-area: img-sobrenosotros;
+
+    }
+
+    .img-sobrenosotros img:hover {
+        transform:scale(1.2);
+        transition: 2s;
+        
     }
 
     .contenedor-imagenes {
-        height: 150px;
+        height: 350px;
         display: flex;
         justify-content: space-evenly;
         background-color: rgb(55, 253, 187);
@@ -830,7 +578,7 @@ footer {
     }
 
     .contenedor-imagenes .img-trabajadores {
-        height: 100px ;
+        height: 200px ;
         display: flex;
         padding-top: 10px;
     }
@@ -860,7 +608,7 @@ footer {
         }
     
         main{
-            height: 700px;
+            height: 600px;
             grid-area: main;
         }
     
@@ -868,7 +616,7 @@ footer {
             font-family: 'Roboto', sans-serif;
             font-size: 2rem;
             text-align: center;
-            padding: 50px 30px;
+            padding: 90px 30px;
         }
     
          .main-sobrenosotros p {
@@ -884,6 +632,7 @@ footer {
         }
     
         .contenedor-imagenes {
+            height: 150px;
             background-image: url(../img/fondo1.jpg);
             background-position: center;
             background-repeat: no-repeat;
@@ -925,7 +674,7 @@ footer {
     
         main{
 
-            height: 700px;
+            height: 600px;
             grid-area: main;
         }
     
@@ -934,7 +683,7 @@ footer {
             font-family: 'Roboto', sans-serif;
             font-size: 2rem;
             text-align: center;
-            padding-top: 50px;
+            padding-top: 60px;
         }
     
          .main-sobrenosotros p {

@@ -1,0 +1,323 @@
+/*media query Mobile Index*/
+
+@media screen and (max-width: 600px) {
+
+    .contedor-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, auto);
+        grid-template-areas: "header"
+                             "main"
+                             "section-sobrenosotros"
+                             "section-productos"
+                             "section.extra"
+                             "footer";
+    }
+      
+    body .contenedor {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header {
+        height: 200px;
+        background-color: rgb(0, 0, 0);
+        grid-area: header;
+        
+    }
+    .nav-config a:hover {
+        color: rgb(188, 151, 222);
+    }
+
+    .main-fondo-home {
+        height: 560px;
+        background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.7) ),url(../img/home.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        grid-area: main;
+        padding-top: 200px;
+    }
+    
+    main .main-eslogan {
+        color: white;
+        text-align: center;
+        font-family: 'Lato', sans-serif;
+        padding: 20px;
+        font-size: 1.7em;
+        form {
+            display: flex;
+            justify-content: center;
+            padding-top: 50px;
+            button {
+                background-color: blueviolet;
+                padding: 10px;
+                border-radius: 10px;
+                font-size: 1.5rem;
+                color: white;
+                font-family: 'Rubik', sans-serif;
+                &:hover {
+                    color: rgb(188, 151, 222);
+                }
+            }
+        }
+    }
+    
+    .section-sobrenosotros {
+        height: 550px;
+        background-color: rgb(245, 245, 245);
+        grid-area: section-sobrenosotros;
+        padding-top: 50px;
+        text-align: center;
+        .h2-sobrenosotros {
+            font-family: 'Roboto', sans-serif;
+            font-size: 2rem;
+        }
+        .p-sobrenosotros {
+            padding: 35px 30px;
+            font-family: 'Libre Franklin', sans-serif;
+            font-size: 1.2rem;
+        }
+        form {
+            padding-top: 5px;
+            button {
+                background-color: blueviolet;
+                padding: 15px;
+                border-radius: 10px;
+                font-size: 1.5rem;
+                color: white;
+                font-family: 'Rubik', sans-serif;
+                &:hover {
+                    color: rgb(188, 151, 222);
+                }
+            }
+        }
+    }
+    
+    .section-productos {
+        height: 550px;
+        grid-area: section-productos;
+        background-color: rgb(26, 26, 26);
+        text-align: center;
+        color: white;
+        .h2-productos {
+            padding: 20px;
+            font-family: 'Libre Franklin', sans-serif;
+            font-size: 2rem;
+            text-transform: uppercase;
+        }
+    }
+     
+    .section-extra {
+        height: 550px;
+        background-color: rgb(248, 236, 222);
+        grid-area: section-extra;
+        padding: 15px;
+        text-align: center;
+        .h2-extra {
+            font-family: 'Roboto', sans-serif;
+            padding-top: 20px;
+            font-size:  2rem;
+            text-transform: uppercase;
+        }
+        .section-extra-contenido {
+            font-size: 1.2rem;
+            padding: 15px 30px;
+            font-family: 'Libre Franklin', sans-serif;
+        }
+        form {
+            padding-top: 15px;
+            button {
+                background-color: blueviolet;
+                padding: 15px;
+                border-radius: 10px;
+                font-size: 1.5rem;
+                color: white;
+                font-family: 'Rubik', sans-serif;
+                &:hover {
+                    color: rgb(188, 151, 222);
+                }
+            }
+        }
+    }
+    
+    footer {
+        font-family: 'Roboto', sans-serif;
+        height: 130px;
+        padding: 15px;
+        background-color: rgb(54, 53, 53);
+        text-align: center;
+        grid-area: footer;
+        color: white;
+        display: relative;
+    }
+}
+
+/*media query Tablet Index*/
+
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+
+    .contedor-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, auto);
+        grid-template-areas: "header"
+                             "main"
+                             "section-sobrenosotros"
+                             "section-productos"
+                             "section.extra"
+                             "footer";
+    }
+      
+    body .contenedor {
+        display: flex;
+        flex-direction: column;
+       
+    }
+
+    header {
+        height: 250px;
+        background-color: rgb(0, 0, 0);
+        grid-area: header;
+        .p-logo {
+            padding: 10px 0;
+            text-align: center;
+            font-family: 'Lato', sans-serif;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: white;  
+        }
+        
+    }
+       
+    .main-fondo-home {
+        height: 800px;
+        background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.7) ),url(../img/home.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        grid-area: main;
+        padding-top: 300px;
+    }
+    
+    main .main-eslogan {
+        color: white;
+        text-align: center;
+        font-family: 'Lato', sans-serif;
+        padding: 50px;
+        font-size: 1.9em;
+        form {
+            display: flex;
+            justify-content: center;
+            padding-top: 50px;
+            button {
+                background-color: blueviolet;
+                padding: 25px;
+                text-transform: uppercase;
+                border-radius: 10px;
+                font-size: 2.3rem;
+                color: white;
+                font-family: 'Rubik', sans-serif;
+                &:hover {
+                    color: rgb(188, 151, 222);
+                }
+            }
+        }
+    }
+
+    .section-sobrenosotros {
+        height: 700px;
+        background-color: rgb(245, 245, 245);
+        grid-area: section-sobrenosotros;
+        padding-top: 100px;
+        text-align: center;
+    }
+    
+    section .h2-sobrenosotros {
+        font-family: 'Roboto', sans-serif;
+        font-size: 2.5rem;
+        .p-sobrenosotros {
+            padding: 35px 30px;
+            font-family: 'Libre Franklin', sans-serif;
+            font-size: 1.5rem;
+        }
+        form {
+            padding-top: 5px;
+            button {
+                background-color: blueviolet;
+                padding: 15px;
+                border-radius: 10px;
+                font-size: 2.3rem;
+                color: white;
+                font-family: 'Rubik', sans-serif;
+                &:hover {
+                    color: rgb(188, 151, 222);
+                }
+            }
+        }
+    }
+    
+    .section-productos {
+        height: 750px;
+        grid-area: section-productos;
+        background-color: rgb(26, 26, 26);
+        text-align: center;
+        color: white;
+        .h2-productos {
+            padding: 15px;
+            font-family: 'Libre Franklin', sans-serif;
+            font-size: 2rem;
+            text-transform: uppercase;
+        }
+    }
+   
+    .section-extra {
+        height: 550px;
+        background-color: rgb(248, 236, 222);
+        grid-area: section-extra;
+        padding: 25px;
+        text-align: center;
+        .h2-extra {
+            font-family: 'Roboto', sans-serif;
+            padding: 20px 0px;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+        }
+        .section-extra-contenido {
+            font-size: 1.5rem;
+            padding: 10px 30px;
+            font-family: 'Libre Franklin', sans-serif;
+        }
+        form {
+            padding-top: 15px;
+            button {
+                background-color: blueviolet;
+                padding: 15px;
+                border-radius: 10px;
+                font-size: 1.5rem;
+                color: white;
+                font-family: 'Rubik', sans-serif;
+                &:hover {
+                    color: rgb(188, 151, 222);
+                }
+            }
+        }
+    }
+    
+    
+    footer {
+        font-family: 'Roboto', sans-serif;
+        height: 130px;
+        padding: 15px;
+        background-color: rgb(54, 53, 53);
+        text-align: center;
+        grid-area: footer;
+        color: white;
+        display: relative;
+    }
+}

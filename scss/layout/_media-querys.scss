@@ -1,5 +1,4 @@
 /*media query Mobile Index*/
-
 @media screen and (max-width: 600px) {
 
     .contedor-grid {
@@ -321,3 +320,134 @@
         display: relative;
     }
 }
+
+
+
+/*media query Mobile Sobre Nosotros*/
+
+@media screen and (max-width:600px) {
+
+    .contenedor-grid-sobrenosotros {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas: "header"
+                             "main"
+                             "img-sobrenosotros"
+                             "contenedor-imagenes"
+                             "footer";
+    }
+
+    header {
+        grid-area: header;
+        
+    }
+
+    main{
+        height: 300px;
+        grid-area: main;
+    }
+
+    main .h2-sobrenosotros {
+        font-family: 'Roboto', sans-serif;
+        font-size: 2rem;
+        text-align: center;
+        padding: 90px 30px;
+        .p1, .p2 {
+            text-align: center;
+            padding: 20px 30px;
+            text-align: justify;
+            font-family: 'Libre Franklin', sans-serif;
+        }
+    }
+
+    
+    .img-sobrenosotros img{
+        display: none;
+        
+    }
+
+    .contenedor-imagenes {
+        height: 150px;
+        background-image: url(../img/fondo1.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: rgb(55, 253, 187);
+        grid-area: contenedor-imagenes;
+        .img-trabajadores {
+            display: none;
+        }
+    }
+
+    footer {
+        grid-area: footer;
+    }  
+}
+
+/*media query Tablet Sobre Nosotros*/
+
+@media screen and (min-width:600px) and (max-width: 1200px) {
+
+    .contenedor-grid-sobrenosotros {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas: "header"
+                             "main"
+                             "img-sobrenosotros"
+                             "contenedor-imagenes"
+                             "footer";
+    }
+
+
+    header {
+        grid-area: header;
+        
+    }
+
+    main{
+        height: 300px;
+        grid-area: main;
+        .h1-sobrenosotros {
+            font-family: 'Roboto', sans-serif;
+            font-size: 2rem;
+            text-align: center;
+            padding-top: 60px;
+            .p1, .p2 {
+                text-align: center;
+                padding: 40px 50px;
+                font-family: 'Libre Franklin', sans-serif;
+                text-align: justify;
+                font-size: 1.2rem;
+            }
+        }
+    }
+ 
+    .img-sobrenosotros img{
+        display: none;
+    }
+
+    .contenedor-imagenes {
+        height: 216px;
+        background-color: rgb(55, 253, 187);
+        background-image: url(../img/fondo1.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        grid-area: contenedor-imagenes;
+        .img-trabajadores {
+            display: none;
+         }
+    }
+
+
+    footer {
+        grid-area: footer;
+    }
+}
+
+
+
+
+

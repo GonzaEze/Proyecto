@@ -1,6 +1,7 @@
 @import "layout/reset";
 @import "layout/mixin";
 
+
 //index
 /*index*/ 
 
@@ -157,27 +158,29 @@ header {
     grid-area: header; 
 }
 
-main{
-    height: 500px;
+.main-sobre-nosotros{
     grid-area: main;
-    .h1-sobrenosotros {
-        font-family: 'Roboto', sans-serif;
-        font-size: 2rem;
-        text-align: center;
-        padding-top: 25px;
+    height: 500px;
+        .h2-sobre-nosotros {
+            font-style: italic;
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            font-size: 2rem;
+            padding-top: 55px;
+        } 
     }
     .p1,.p2 {
-        padding: 50px 40px;
+        text-align: justify;
+        padding: 45px 50px;
         font-family: 'Libre Franklin', sans-serif;
         font-weight: bold;
+        font-size: 1.1rem;
     }
 
-}
 
 .img-sobrenosotros img{
     height: 200px;
-    padding-bottom: 10px;
-    margin: 150px 25px ;
+    margin: 200px 25px ;
     grid-area: img-sobrenosotros;
     &:hover{
         transform:scale(1.2);
@@ -185,17 +188,23 @@ main{
 }
 
 .contenedor-imagenes {
-    height: 300px;
+    height: 200px;
     display: flex;
-    justify-content: space-evenly;
-    background-color: rgb(55, 253, 187);
+    justify-content: space-around;
+    background-color: rgb(0, 0, 0);
     grid-area: contenedor-imagenes;
-}
-
-.contenedor-imagenes .img-trabajadores {
-    height: 150px ;
-    display: flex;
-    padding-top: 10px;
+    .img-trabajadores {
+        height: 150px ;
+        display: flex;
+        
+        padding-top: 30px;
+        .img-radius {
+            border-radius: 100px;
+            &:hover{
+                transform:scale(1.5);
+                transition: 2s;} 
+        }
+    }
 }
 
 footer {
@@ -206,171 +215,170 @@ footer {
 /*productos*/
 
 .contenedor-productos {
- @include display-grid-productos;
-}
-
-header{
-    grid-area: header;
-}
-
-main {
-    height: 600px;
-    grid-area: main;
-    
-    h2 {
-        padding: 10px;
-        height: 60px;
-        text-align: center;
-        background-color: rgb(52, 52, 52);
-        font-family: 'Roboto', sans-serif;
-        font-weight: bold;
-        text-transform: uppercase;
-        color: white;
-    }
-    section { 
-        padding-top: 10px;
-        justify-content: center;
-        display: flex;
-        text-align: center
-    }
-}
-
-footer {
-    @include footer;
-    grid-area: footer;
-}
-
-
-/*ENVIOS*/
-
-.contenedor-grid-envios {
-    @include display-grid-envios
-}
-
-header {
-    grid-area: header;
-}
-
-main {
-    grid-area: main;
-}
-
-.contenedor-envios {
-    background-color: rgb(218, 255, 243);
-    height: 290px;
-}
-
-.contenedor-envios h1 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 2rem;
-    text-align: center;
-    padding: 25px;
-}
-
-.contenedor-envios .envios1 {
-    font-family: 'Libre Franklin', sans-serif;
-    text-align: justify;
-    padding: 5px 25px;
-    
-}
-
-.contenedor-envios .envios2 {
-    font-family: 'Libre Franklin', sans-serif;
-    text-align: justify;
-    padding: 5px 25px;
-}
-
-.section-envios {
-    background-color: rgb(218, 255, 243);
-    display: flex;
-    flex-direction: column column;
-    grid-area: section-envios;
-}
-
-.section-envios .section1 {
-    font-family: 'Libre Franklin', sans-serif;
-    text-align: justify;
-    padding: 5px 25px;
-}
-
-.section-envios .section2 {
-    font-family: 'Libre Franklin', sans-serif;
-    text-align: justify;
-    padding: 5px 25px;
-}
-
-.section-envios img {
-    display: flex;
-    padding: 10px;
-    height: 100px;
-}
-
-footer {
-    @include footer;
-    grid-area: footer;
-}
-
-
-.contenedor-grid-contacto {
-    display: grid;
-    grid-template-columns: 3fr;
-    grid-template-rows: repeat(3, auto);
-    grid-template-areas: "header header header"
-                          "main main main"
-                          "footer footer footer";
-}
-
-header {
-    grid-area: header;
-
-}
-
- main { 
-     grid-area: main;
-     background-color: antiquewhite;
-     height: 700px;
- }
-
-
-.formulario-contacto,textarea {
-    grid-area: formulario-contacto;
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-}
-
-main .formulario-contacto legend {
-    font-size: 2rem;
-    padding: 30px 15px;
+    @include display-grid-productos;
+   }
    
-}
-
-.formulario-contacto-style label {
-    display: flex;
-    flex-direction: column;
-    margin: 15px;
-    font-size: 1.5rem;
-}
-
-.formulario-contacto-style input, textarea {
-    text-align: center;
-    padding: 15px 15px;
-    background-color: rgb(212, 255, 255);
-}
-
-.formulario-contacto-buttons input {
-    background-color: rgb(127, 3, 243);
-    padding: 10px;
-    border-radius: 15px;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    color: white;
-    margin: 15px 5px;
-}
-
-.formulario-contacto-buttons input:hover {
-    color: rgb(222, 198, 244);
-}
-
-footer {
-    grid-area: footer;
-}
+   header{
+       grid-area: header;
+   }
+   
+   main {
+       height: 800px;
+       grid-area: main;
+       
+       .h2-productos {
+           padding: 10px;
+           height: 60px;
+           text-align: center;
+           background-color: rgb(52, 52, 52);
+           font-family: 'Roboto', sans-serif;
+           font-weight: bold;
+           text-transform: uppercase;
+           color: white;
+       }
+       section { 
+           padding-top: 10px;
+           justify-content: center;
+           display: flex;
+           text-align: center
+       }
+   }
+   
+   footer {
+       @include footer;
+       grid-area: footer;
+   }
+   
+   
+   /*ENVIOS*/
+   
+   .contenedor-grid-envios {
+       @include display-grid-envios
+   }
+   
+   header {
+       grid-area: header;
+   }
+   
+   main {
+       grid-area: main;
+   }
+   
+   .contenedor-envios {
+       background-color: rgb(218, 255, 243);
+       height: 290px;
+   }
+   
+   .contenedor-envios h1 {
+       font-family: 'Roboto', sans-serif;
+       font-size: 2rem;
+       text-align: center;
+       padding: 25px;
+   }
+   
+   .contenedor-envios .envios1 {
+       font-family: 'Libre Franklin', sans-serif;
+       text-align: justify;
+       padding: 5px 25px;
+       
+   }
+   
+   .contenedor-envios .envios2 {
+       font-family: 'Libre Franklin', sans-serif;
+       text-align: justify;
+       padding: 5px 25px;
+   }
+   
+   .section-envios {
+       background-color: rgb(218, 255, 243);
+       display: flex;
+       flex-direction: column column;
+       grid-area: section-envios;
+   }
+   
+   .section-envios .section1 {
+       font-family: 'Libre Franklin', sans-serif;
+       text-align: justify;
+       padding: 5px 25px;
+   }
+   
+   .section-envios .section2 {
+       font-family: 'Libre Franklin', sans-serif;
+       text-align: justify;
+       padding: 5px 25px;
+   }
+   
+   .section-envios img {
+       display: flex;
+       padding: 10px;
+       height: 100px;
+   }
+   
+   footer {
+       @include footer;
+       grid-area: footer;
+   }
+   
+   
+   .contenedor-grid-contacto {
+       @include contenedor-grid-contacto;
+   }
+   
+   header {
+       grid-area: header;
+   
+   }
+   
+    main { 
+        grid-area: main;
+    }
+   
+   .formulario-contacto-principal {
+   
+       background-color: antiquewhite;
+       height: 700px;
+   }
+   
+   .formulario-contacto,textarea {
+       grid-area: formulario-contacto;
+       text-align: center;
+       font-family: 'Roboto', sans-serif;
+   }
+   
+   main .formulario-contacto legend {
+       font-size: 2rem;
+       padding: 30px 15px;
+      
+   }
+   
+   .formulario-contacto-style label {
+       display: flex;
+       flex-direction: column;
+       margin: 15px;
+       font-size: 1.5rem;
+   }
+   
+   .formulario-contacto-style input, textarea {
+       text-align: center;
+       padding: 15px 15px;
+       background-color: rgb(212, 255, 255);
+   }
+   
+   .formulario-contacto-buttons input {
+       background-color: rgb(127, 3, 243);
+       padding: 10px;
+       border-radius: 15px;
+       text-transform: uppercase;
+       font-size: 0.9rem;
+       color: white;
+       margin: 15px 5px;
+   }
+   
+   .formulario-contacto-buttons input:hover {
+       color: rgb(222, 198, 244);
+   }
+   
+   footer {
+       grid-area: footer;
+   }
+   

@@ -1,0 +1,84 @@
+@mixin display-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas: "header"
+                         "main"
+                         "section-sobrenosotros"
+                         "section-productos"
+                         "section.extra"
+                         "footer";
+}
+
+@mixin display-grid-sobrenosotros {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "header header header"
+                         "main main img-sobrenosotros"
+                         "contenedor-imagenes contenedor-imagenes contenedor-imagenes"
+                         "footer footer footer";
+}
+
+@mixin display-grid-productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "header header header"
+                         "main main main"
+                         "footer footer footer";
+}
+
+@mixin display-grid-envios {
+    display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: "header header header"
+                             "main main main"
+                             "section-envios section-envios section-envios"
+                             "footer footer footer";
+    
+}
+
+@mixin contenedor-grid-contacto {
+    display: grid;
+    grid-template-columns: 3fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "header header header"
+                          "main main main"
+                          "footer footer footer";
+}
+
+
+
+@mixin logo {
+    padding-left: 20px;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.9rem;
+    font-weight: bold;
+    color: white;
+}
+
+@mixin nav {
+    list-style: none;
+        margin: 3px;
+        border-radius: 10px;
+        font-size: 1.2rem;
+        font-family: 'Roboto', sans-serif;
+        border: 2px solid white; 
+        text-align: center;
+        &:hover {
+            background: rgb(92, 27, 72)
+        }
+}
+
+@mixin footer {
+    font-family: 'Roboto', sans-serif;
+    height: 140px;
+    padding: 15px;
+    background-color: rgb(54, 53, 53);
+    text-align: center;
+    grid-area: footer;
+    color: white;
+    display: relative;
+}

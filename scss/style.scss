@@ -1,21 +1,12 @@
 @import "layout/reset";
-@import "layout/media-querys";
+@import "layout/mixin";
 
 //index
-
 /*index*/ 
-.contedor-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, auto);
-    grid-template-areas: "header"
-                         "main"
-                         "section-sobrenosotros"
-                         "section-productos"
-                         "section.extra"
-                         "footer";
-}
 
+.contedor-grid {
+   @include display-grid;
+}
 
 body .contenedor {
     padding-top: 20px;
@@ -27,24 +18,11 @@ header {
     height: 100px;
     background-color: rgb(0, 0, 0);
     grid-area: header;
-    .p-logo{
-    padding-left: 20px;
-    font-family: 'Lato', sans-serif;
-    font-size: 1.9rem;
-    font-weight: bold;
-    color: white;
+    .h1-logo{
+    @include logo;
     }
     .nav-productos ul li {
-        list-style: none;
-        margin: 3px;
-        border-radius: 10px;
-        font-size: 1.2rem;
-        font-family: 'Roboto', sans-serif;
-        border: 2px solid white; 
-        text-align: center;
-        &:hover {
-            background: rgb(92, 27, 72)
-        }
+        @include nav;
     }
 }
 
@@ -66,16 +44,16 @@ main {
         text-align: center;
         font-family: 'Lato', sans-serif;
         padding: 10px;
-        font-size: 1.7rem;}
+        font-size: 2rem;}
         form {
             display: flex;
             justify-content: center;
             padding-top: 50px;
             button {
                 background-color: blueviolet;
-                padding: 10px;
+                padding: 15px;
                 border-radius: 10px;
-                font-size: 1.5rem;
+                font-size: 1.7rem;
                 color: white;
                 font-family: 'Rubik', sans-serif;
                 &:hover {
@@ -87,18 +65,20 @@ main {
 
 .section-sobrenosotros {
     height: 550px;
-    background-color: rgb(253, 251, 251);
+    background-color: rgb(221, 241, 250);
     grid-area: section-sobrenosotros;
     padding-top: 80px;
     text-align: center;
     .h2-sobrenosotros {
         font-family: 'Roboto', sans-serif;
         font-size: 2.5rem;
+        font-style: italic;
     }
     .p-sobrenosotros {
-        padding: 60px 30px;
+        padding: 60px 60px;
         font-family: 'Libre Franklin', sans-serif;
-        font-size: 1.2rem;
+        font-weight: bold;
+        font-size: 1.3rem;
     }
     form {
         padding-top: 15px;
@@ -106,15 +86,14 @@ main {
             background-color: blueviolet;
             padding: 15px;
             border-radius: 10px;
-            font-size: 1.5rem;
+            font-size: 1.7rem;
             color: white;
             font-family: 'Rubik', sans-serif;
             &:hover {
-                color: rgb(188, 151, 222);
+            color: rgb(188, 151, 222);
             }
         }
     }
-   
 }
 
 .section-productos {
@@ -154,7 +133,7 @@ main {
             background-color: blueviolet;
             padding: 15px;
             border-radius: 10px;
-            font-size: 1.5rem;
+            font-size: 1.7rem;
             color: white;
             font-family: 'Rubik', sans-serif;
             &:hover {
@@ -165,13 +144,233 @@ main {
 }
 
 footer {
-    font-family: 'Roboto', sans-serif;
-    height: 130px;
-    padding: 15px;
-    background-color: rgb(54, 53, 53);
-    text-align: center;
-    grid-area: footer;
-    color: white;
-    display: relative;
+    @include footer;
 }
     
+/* SOBRE NOSOTROS*/
+
+.contenedor-grid-sobrenosotros {
+    @include display-grid-sobrenosotros;
+}
+
+header {
+    grid-area: header; 
+}
+
+main{
+    height: 500px;
+    grid-area: main;
+    .h1-sobrenosotros {
+        font-family: 'Roboto', sans-serif;
+        font-size: 2rem;
+        text-align: center;
+        padding-top: 25px;
+    }
+    .p1,.p2 {
+        padding: 50px 40px;
+        font-family: 'Libre Franklin', sans-serif;
+        font-weight: bold;
+    }
+
+}
+
+.img-sobrenosotros img{
+    height: 200px;
+    padding-bottom: 10px;
+    margin: 150px 25px ;
+    grid-area: img-sobrenosotros;
+    &:hover{
+        transform:scale(1.2);
+        transition: 2s;} 
+}
+
+.contenedor-imagenes {
+    height: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(55, 253, 187);
+    grid-area: contenedor-imagenes;
+}
+
+.contenedor-imagenes .img-trabajadores {
+    height: 150px ;
+    display: flex;
+    padding-top: 10px;
+}
+
+footer {
+    grid-area: footer;
+    @include footer;
+}
+
+/*productos*/
+
+.contenedor-productos {
+ @include display-grid-productos;
+}
+
+header{
+    grid-area: header;
+}
+
+main {
+    height: 600px;
+    grid-area: main;
+    
+    h2 {
+        padding: 10px;
+        height: 60px;
+        text-align: center;
+        background-color: rgb(52, 52, 52);
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: white;
+    }
+    section { 
+        padding-top: 10px;
+        justify-content: center;
+        display: flex;
+        text-align: center
+    }
+}
+
+footer {
+    @include footer;
+    grid-area: footer;
+}
+
+
+/*ENVIOS*/
+
+.contenedor-grid-envios {
+    @include display-grid-envios
+}
+
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+}
+
+.contenedor-envios {
+    background-color: rgb(218, 255, 243);
+    height: 290px;
+}
+
+.contenedor-envios h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    padding: 25px;
+}
+
+.contenedor-envios .envios1 {
+    font-family: 'Libre Franklin', sans-serif;
+    text-align: justify;
+    padding: 5px 25px;
+    
+}
+
+.contenedor-envios .envios2 {
+    font-family: 'Libre Franklin', sans-serif;
+    text-align: justify;
+    padding: 5px 25px;
+}
+
+.section-envios {
+    background-color: rgb(218, 255, 243);
+    display: flex;
+    flex-direction: column column;
+    grid-area: section-envios;
+}
+
+.section-envios .section1 {
+    font-family: 'Libre Franklin', sans-serif;
+    text-align: justify;
+    padding: 5px 25px;
+}
+
+.section-envios .section2 {
+    font-family: 'Libre Franklin', sans-serif;
+    text-align: justify;
+    padding: 5px 25px;
+}
+
+.section-envios img {
+    display: flex;
+    padding: 10px;
+    height: 100px;
+}
+
+footer {
+    @include footer;
+    grid-area: footer;
+}
+
+
+.contenedor-grid-contacto {
+    display: grid;
+    grid-template-columns: 3fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "header header header"
+                          "main main main"
+                          "footer footer footer";
+}
+
+header {
+    grid-area: header;
+
+}
+
+ main { 
+     grid-area: main;
+     background-color: antiquewhite;
+     height: 700px;
+ }
+
+
+.formulario-contacto,textarea {
+    grid-area: formulario-contacto;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+main .formulario-contacto legend {
+    font-size: 2rem;
+    padding: 30px 15px;
+   
+}
+
+.formulario-contacto-style label {
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    font-size: 1.5rem;
+}
+
+.formulario-contacto-style input, textarea {
+    text-align: center;
+    padding: 15px 15px;
+    background-color: rgb(212, 255, 255);
+}
+
+.formulario-contacto-buttons input {
+    background-color: rgb(127, 3, 243);
+    padding: 10px;
+    border-radius: 15px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    color: white;
+    margin: 15px 5px;
+}
+
+.formulario-contacto-buttons input:hover {
+    color: rgb(222, 198, 244);
+}
+
+footer {
+    grid-area: footer;
+}

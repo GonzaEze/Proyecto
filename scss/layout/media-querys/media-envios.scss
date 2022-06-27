@@ -1,0 +1,135 @@
+@media screen and (max-width:600px) {
+
+    .contenedor-grid-envios {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: "header"
+                             "main"
+                             "section-envios"
+                             "footer";
+    }
+
+    header {
+        grid-area: header;
+    }
+
+    main {
+        grid-area: main;
+    }
+
+    .contenedor-envios {
+        background-color: rgb(218, 255, 243);
+        height: auto;
+        h1 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 2rem;
+            text-align: center;
+            padding: 30px;
+        }
+        .envios1 {
+            font-size: 1.3rem;
+            font-family: 'Libre Franklin', sans-serif;
+            text-align: justify;
+            padding: 20px 40px;
+        }
+        .envios2 {
+            font-size: 1.3rem;
+            font-family: 'Libre Franklin', sans-serif;
+            text-align: justify;
+            padding: 20px 40px;
+        }
+    }
+  .section-envios {
+        background-color: rgb(218, 255, 243);
+        display: flex;
+        flex-direction: column;
+        grid-area: section-envios;
+        .section1 {
+            font-size: 1.3rem;
+            font-family: 'Libre Franklin', sans-serif;
+            text-align: justify;
+            padding: 20px 40px;
+        }
+        .section2 {
+            font-size: 1.3rem;
+            font-family: 'Libre Franklin', sans-serif;
+            text-align: justify;
+            padding: 20px 40px;
+        }
+        img {
+            display: none;
+        }
+    }
+    footer {
+        grid-area: footer;
+    }
+}
+    @media screen and (min-width:600px) and (max-width: 1200px) {
+
+        .contenedor-grid-envios {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(4, auto);
+            grid-template-areas: "header"
+                                 "main"
+                                 "section-envios"
+                                 "footer";
+        }
+    
+        header {
+            grid-area: header;
+        }
+    
+        main {
+            grid-area: main;
+        }
+    
+        .contenedor-envios {
+            background-color: rgb(218, 255, 243);
+            height: auto;
+            h1 {
+                font-family: 'Roboto', sans-serif;
+                font-size: 2rem;
+                text-align: center;
+                padding: 30px;
+            }
+            .envios1 {
+                font-size: 1.3rem;
+                font-family: 'Libre Franklin', sans-serif;
+                text-align: justify;
+                padding: 20px 40px;
+            }
+            .envios2 {
+                font-size: 1.3rem;
+                font-family: 'Libre Franklin', sans-serif;
+                text-align: justify;
+                padding: 20px 40px;
+            }
+        }
+      .section-envios {
+            background-color: rgb(218, 255, 243);
+            display: flex;
+            flex-direction: column;
+            grid-area: section-envios;
+            .section1 {
+                font-size: 1.3rem;
+                font-family: 'Libre Franklin', sans-serif;
+                text-align: justify;
+                padding: 20px 40px;
+            }
+            .section2 {
+                font-size: 1.3rem;
+                font-family: 'Libre Franklin', sans-serif;
+                text-align: justify;
+                padding: 20px 40px;
+            }
+            img {
+                display: none;
+            }
+        }
+        footer {
+            grid-area: footer;
+        }
+    
+    }

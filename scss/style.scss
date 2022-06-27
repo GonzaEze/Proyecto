@@ -3,6 +3,7 @@
 @import "layout/variables";
 @import "layout/extend";
 
+
 //index
 /*index*/ 
 
@@ -127,7 +128,8 @@ main {
 footer {
     @include footer;
 }
-    
+@import "layout/media-querys/home.scss";
+
 /* SOBRE NOSOTROS*/
 
 .contenedor-grid-sobrenosotros {
@@ -138,21 +140,21 @@ header {
 }
 .main-sobre-nosotros{
     grid-area: main;
-    height: 500px;
+    height: auto;
         .h2-sobre-nosotros {
             font-style: italic;
             text-align: center;
             font-family: 'Roboto', sans-serif;
             font-size: 2rem;
-            padding-top: 55px;
+            padding-top: 50px;
         } 
     }
     .p1,.p2 {
         text-align: justify;
-        padding: 45px 50px;
+        padding: 30px 50px;
         font-family: 'Libre Franklin', sans-serif;
         font-weight: bold;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
 .img-sobrenosotros img{
     height: 200px;
@@ -162,7 +164,7 @@ header {
         @extend %transition-uno} 
 }
 .contenedor-imagenes {
-    height: 200px;
+    height: 300px;
     display: flex;
     justify-content: space-around;
     background-color: $color;
@@ -182,6 +184,7 @@ footer {
     grid-area: footer;
     @include footer;
 }
+@import "layout/media-querys/media-sobre-nosotros.scss";
 
 /*productos*/
 .contenedor-productos {
@@ -191,7 +194,7 @@ footer {
        grid-area: header;
    }
    main {
-       height: 800px;
+       height: 900px;
        grid-area: main;
        .h2-productos {
            padding: 10px;
@@ -204,18 +207,20 @@ footer {
            color: white;
        }
        section { 
-           padding-top: 10px;
+           padding: 25px 50px;
            justify-content: center;
            display: flex;
-           text-align: center
+           text-align: center;
+           font-size: 1.3rem;
        }
    }
    footer {
        @include footer;
        grid-area: footer;
    }
-
-   /*ENVIOS*/
+@import "layout/media-querys/media-productos.scss";
+   
+/*ENVIOS*/
    .contenedor-grid-envios {
        @include display-grid-envios
    }
@@ -260,7 +265,9 @@ footer {
        @include footer;
        grid-area: footer;
    }
-   
+   @import "layout/media-querys/media-envios.scss";
+
+
    /*CONTACTO*/
 
    .contenedor-grid-contacto {
@@ -323,7 +330,6 @@ footer {
             padding: 25px;
         }
         .mapa-contacto {
-            
             display: flex;
             justify-content: center;
         }
@@ -338,4 +344,4 @@ footer {
        grid-area: footer;
        @include footer;
    }
-   
+   @import "layout/media-querys/media-contacto.scss";

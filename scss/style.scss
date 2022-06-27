@@ -193,10 +193,10 @@ footer {
    header{
        grid-area: header;
    }
-   main {
-       height: 900px;
+   .main-productos {
+       height: auto;
        grid-area: main;
-       .h2-productos {
+        .h2-main-productos {
            padding: 10px;
            height: 60px;
            text-align: center;
@@ -206,18 +206,25 @@ footer {
            text-transform: uppercase;
            color: white;
        }
-       section { 
+       .cartas-productos { 
            padding: 25px 50px;
-           justify-content: center;
            display: flex;
            text-align: center;
            font-size: 1.3rem;
        }
-   }
+       .texto-productos {
+        padding: 25px 50px;
+        font-size: 1.1rem;
+        font-family: 'Libre Franklin', sans-serif;
+        text-align: justify
+    }
+
+}
    footer {
        @include footer;
        grid-area: footer;
    }
+   
 @import "layout/media-querys/media-productos.scss";
    
 /*ENVIOS*/
@@ -344,4 +351,5 @@ footer {
        grid-area: footer;
        @include footer;
    }
+   
    @import "layout/media-querys/media-contacto.scss";

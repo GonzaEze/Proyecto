@@ -193,10 +193,10 @@ footer {
    header{
        grid-area: header;
    }
-   .main-productos {
+   main {
        height: auto;
        grid-area: main;
-        .h2-main-productos {
+       .h2-main-productos {
            padding: 10px;
            height: 60px;
            text-align: center;
@@ -206,31 +206,33 @@ footer {
            text-transform: uppercase;
            color: white;
        }
-       .cartas-productos { 
-           padding: 25px 50px;
-           display: flex;
-           text-align: center;
-           font-size: 1.3rem;
+       .cartas-productos {
+        display: flex;
+        justify-content: center;
+        .bg-black {
+            border-radius: 20px;
+            height: auto;
+            text-align: center;
+        }
        }
-       .texto-productos {
+   }
+   .texto-productos {
         padding: 25px 50px;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
+        text-align: justify;
         font-family: 'Libre Franklin', sans-serif;
-        text-align: justify
-    }
-
-}
+   }  
    footer {
        @include footer;
        grid-area: footer;
    }
-   
-@import "layout/media-querys/media-productos.scss";
-   
+
+   @import "layout/media-querys/media-productos.scss";
 /*ENVIOS*/
    .contenedor-grid-envios {
        @include display-grid-envios
    }
+
    header {
        grid-area: header;
    }

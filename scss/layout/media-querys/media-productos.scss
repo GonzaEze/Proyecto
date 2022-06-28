@@ -1,88 +1,47 @@
 @media screen and (max-width: 600px) {
-    .contenedor-productos {
+    .contenedor-productos{
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, auto);
+        grid-template-rows: repeat(3, auto);
         grid-template-areas: "header"
                              "main"
-                             "section"
                              "footer";
-       }
-       header{
-           grid-area: header;
-       }
-
-       .main-productos {
-           height: auto;
-           grid-area: main;
-
-           .h2-productos {
-               padding: 10px;
-               height: 60px;
-               text-align: center;
-               background-color: rgb(52, 52, 52);
-               font-family: 'Roboto', sans-serif;
-               font-weight: bold;
-               text-transform: uppercase;
-               color: white;
-           }
-           .cartas-productos { 
-               display: flex;
-               flex-direction: column;
-               align-items: center;
-               grid-area: section;
-               padding: 25px 50px;
-               text-align: center;
-               font-size: 1.3rem;
-           }
-        
-       }
-       footer {
-           @include footer;
-           grid-area: footer;
-       }
+    }
+    header{
+        grid-area: header;
+    }
+    main {
+        height: auto;
+        grid-area: main;
+        .h2-main-productos {
+            padding: 10px;
+            height: 60px;
+            text-align: center;
+            background-color: rgb(52, 52, 52);
+            font-family: 'Roboto', sans-serif;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: white;
+        }
+        .cartas-productos {
+         display: flex;
+         justify-content: center;
+         .bg-black {
+             border-radius: 20px;
+             height: auto;
+             text-align: center;
+         }
+        }
+    }
+    .texto-productos {
+         padding: 25px 50px;
+         font-size: 1.2rem;
+         text-align: justify;
+         font-family: 'Libre Franklin', sans-serif;
+    }  
+    footer {
+        @include footer;
+        grid-area: footer;
+    }
 }
 
-@media screen and (min-width: 600px) and (max-width: 1200px) {
-    .contenedor-productos {
-        display: grid;
-        grid-template-columns: 2fr;
-        grid-template-rows: repeat(4, auto);
-        grid-template-areas: "header header"
-                             "main main"
-                             "section section"
-                             "footer footer";
-       }
-       header{
-           grid-area: header;
-       }
-
-       .main-productos {
-           height: auto;
-           grid-area: main;
-
-           .h2-main-productos {
-               padding: 10px;
-               height: 60px;
-               text-align: center;
-               background-color: rgb(52, 52, 52);
-               font-family: 'Roboto', sans-serif;
-               font-weight: bold;
-               text-transform: uppercase;
-               color: white;
-           }
-           .cartas-productos { 
-               display: flex;
-               flex-direction: column;
-               align-items: center;
-               grid-area: section;
-               padding: 25px 50px;
-               text-align: center;
-               font-size: 1.3rem;
-           }
-       }
-       footer {
-           @include footer;
-           grid-area: footer;
-       }
-}

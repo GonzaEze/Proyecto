@@ -37,9 +37,10 @@
         background-image: linear-gradient(
         0deg,
         rgba(0,0,0,0.7),
-        rgba(0,0,0,0.7) ),url(../img/home.jpeg);
+        rgba(0,0,0,0.7) ),url(../img/home.png);
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center;
         grid-area: main;
         padding-top: 200px;
     }
@@ -203,9 +204,10 @@
         background-image: linear-gradient(
         0deg,
         rgba(0,0,0,0.7),
-        rgba(0,0,0,0.7) ),url(../img/home.jpeg);
+        rgba(0,0,0,0.7) ),url(../img/home.png);
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center;
         grid-area: main;
         padding-top: 300px;
     }

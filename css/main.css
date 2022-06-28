@@ -36,11 +36,12 @@ header {
   background-color: black;
   grid-area: header; }
   header .h1-logo {
-    padding-left: 20px;
+    padding: 10px 50px;
     font-family: 'Lato', sans-serif;
     font-size: 1.9rem;
     font-weight: bold;
-    color: white; }
+    color: white;
+    text-decoration: none; }
   header .nav-productos ul li {
     list-style: none;
     margin: 3px;
@@ -54,7 +55,7 @@ header {
 
 .main-fondo-home {
   height: 560px;
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/home.jpeg);
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/home.png);
   background-repeat: no-repeat;
   background-size: cover;
   grid-area: main;
@@ -157,9 +158,10 @@ footer {
     color: #bc97de; }
   .main-fondo-home {
     height: 560px;
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/home.jpeg);
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/home.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     grid-area: main;
     padding-top: 200px; }
   main .main-eslogan {
@@ -277,9 +279,10 @@ footer {
       color: white; }
   .main-fondo-home {
     height: 800px;
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/home.jpeg);
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/home.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     grid-area: main;
     padding-top: 300px; }
   main .main-eslogan {
@@ -568,7 +571,8 @@ footer {
       color: white; }
     main .cartas-productos {
       display: flex;
-      justify-content: center; }
+      flex-direction: column;
+      align-items: center; }
       main .cartas-productos .bg-black {
         border-radius: 20px;
         height: auto;

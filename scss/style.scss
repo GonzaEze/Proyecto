@@ -27,15 +27,7 @@ header {
     }
 }
  .main-fondo-home {
-    height: 560px;
-    background-image: linear-gradient(
-    0deg,
-    rgba(0,0,0,0.7),
-    rgba(0,0,0,0.7) ),url(../img/home.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    grid-area: main;
-    padding-top: 250px;
+    @include home;
 }
 main {
     .main-eslogan {
@@ -213,9 +205,9 @@ footer {
             border-radius: 20px;
             height: auto;
             text-align: center;
+            }
         }
-       }
-   }
+    }
    .texto-productos {
         padding: 25px 50px;
         font-size: 1.2rem;

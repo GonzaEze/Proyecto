@@ -62,6 +62,9 @@
                 font-size: 1.5rem;
                 color: white;
                 font-family: 'Rubik', sans-serif;
+                &:hover {
+                    color: $hover;
+                                }
             }
         }
     }
@@ -142,11 +145,13 @@
                 font-size: 1.5rem;
                 color: white;
                 font-family: 'Rubik', sans-serif;
+                &:hover {
+                    color: $hover;
+                    }
             }
         }
-        button:hover {
-            color: rgb(181, 131, 232);}
-        }
+    }
+
     }
     
     footer {
@@ -230,11 +235,11 @@
                 font-size: 2.3rem;
                 color: white;
                 font-family: 'Rubik', sans-serif;
+                &:hover {
+                    color: $hover;
+                }
             }
         }
-        form button:hover{
-            color: rgb(188, 151, 222);;
-         }
     }
 
     .section-sobrenosotros {
@@ -262,10 +267,10 @@
                 font-size: 2.3rem;
                 color: white;
                 font-family: 'Rubik', sans-serif;
+                &:hover {
+                    color: $hover;
+                }
             }
-        }
-        section form button:hover {
-            color: rgb(181, 131, 232);
         }
     }
     
@@ -309,6 +314,9 @@
                 font-size: 1.5rem;
                 color: white;
                 font-family: 'Rubik', sans-serif;
+                &:hover {
+                    color: $hover;
+                }
             }
         }
     }

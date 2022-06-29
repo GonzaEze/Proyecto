@@ -48,9 +48,8 @@ main {
             }
         }
 }
-.section-sobrenosotros {
-    height: 550px;
-    background-color: rgb(221, 241, 250);
+.section-sobrenosotros {   
+    height: 600px;
     grid-area: section-sobrenosotros;
     padding-top: 80px;
     .h2-sobrenosotros {
@@ -67,7 +66,7 @@ main {
         text-align: center;
     }
     form {
-        padding-top: 15px;
+        padding-top: 5px;
         text-align: center;
         button {
             @extend %botones;
@@ -199,12 +198,21 @@ footer {
            color: white;
        }
        .cartas-productos {
+        padding-top: 30px;
         display: flex;
         justify-content: center;
         .bg-black {
             border-radius: 20px;
             height: auto;
             text-align: center;
+            &:hover{
+                box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+                transform: translateY(-3%);}
+            .card-img-top{
+                border-radius: 10px;
+                &:hover{
+                    @extend %transition-dos} 
+            }
             }
         }
     }

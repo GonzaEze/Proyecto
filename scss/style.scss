@@ -10,11 +10,13 @@
 .contedor-grid {
    @include display-grid;
 }
+
 body .contenedor {
     padding-top: 20px;
     display: flex;
     justify-content: space-between;
 }
+
 header {
     height: 100px;
     background-color: $color;
@@ -34,7 +36,7 @@ main {
         color: white;
         text-align: center;
         font-family: 'Lato', sans-serif;
-        padding: 10px;
+        padding: 0 25px;
         font-size: 2rem;}
         form {
             display: flex;
@@ -50,6 +52,9 @@ main {
 }
 .section-sobrenosotros {   
     height: 600px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     grid-area: section-sobrenosotros;
     padding-top: 80px;
     .h2-sobrenosotros {
@@ -59,10 +64,10 @@ main {
         font-style: italic;
     }
     .p-sobrenosotros {
-        padding: 60px 60px;
+        padding: 50px 80px;
         font-family: 'Libre Franklin', sans-serif;
         font-weight: bold;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         text-align: center;
     }
     form {
@@ -77,7 +82,7 @@ main {
     }
 }
 .section-productos {
-    height: 1000px;
+    height: 780px;
     grid-area: section-productos;
     background-color: rgb(26, 26, 26);
     text-align: center;
@@ -89,6 +94,7 @@ main {
         text-transform: uppercase;
     }
 }
+
 .section-extra {
     height: 550px;
     background-color: rgb(248, 236, 222);
@@ -102,7 +108,7 @@ main {
         text-transform: uppercase;
     }
     .section-extra-contenido {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         padding: 50px 30px;
         font-family: 'Libre Franklin', sans-serif;
     }
@@ -131,43 +137,55 @@ header {
 }
 .main-sobre-nosotros{
     grid-area: main;
-    height: auto;
+    height: 720px;
         .h2-sobre-nosotros {
             font-style: italic;
             text-align: center;
             font-family: 'Roboto', sans-serif;
             font-size: 2rem;
-            padding-top: 50px;
+            padding: 35px 25px ;
         } 
     }
-    .p1,.p2 {
+    .p1,.p2, .p3 {
+        color: rgb(49, 49, 49);
         text-align: justify;
-        padding: 30px 50px;
+        padding: 5px 50px;
         font-family: 'Libre Franklin', sans-serif;
-        font-weight: bold;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
-.img-sobrenosotros img{
-    height: 200px;
-    margin: 200px 25px ;
+.img-sobrenosotros{
     grid-area: img-sobrenosotros;
-    &:hover{
-        @extend %transition-uno} 
+    img{
+        margin-top: 10px;
+    }
 }
 .contenedor-imagenes {
-    height: 300px;
+    height: auto;
     display: flex;
-    justify-content: space-around;
-    background-color: $color;
+    justify-content: space-evenly;
+    background-color: rgb(41, 41, 41);
     grid-area: contenedor-imagenes;
     .img-trabajadores {
-        height: 150px ;
-        display: flex;
-        padding-top: 30px;
+        padding-top: 40px;
         .img-radius {
+            margin: 10px;
+            height: 150px;
+            width: 150px;
             border-radius: 100px;
             &:hover{
                 @extend %transition-dos} 
+        }
+        .texto-empleados {
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            .p {
+                font-size: 1.3rem;
+                padding-top: 5px;
+            }
+            .p-dos {
+                font-size: 1.2rem;
+            }
         }
     }
 }
@@ -214,14 +232,26 @@ footer {
                     @extend %transition-dos} 
             }
             }
+            .card-title {
+                padding-top: 7px;
+            }
+            .card-text {
+                padding-top: 10px;
+                text-align: center;
+            }
         }
+        .linea-rainbow {
+            padding: 30px 40px;
+        }
+        .texto-productos {
+            padding: 10px 50px;
+            font-size: 1.1rem;
+            text-align: justify;
+            font-family: 'Libre Franklin', sans-serif;
+       }  
     }
-   .texto-productos {
-        padding: 25px 50px;
-        font-size: 1.2rem;
-        text-align: justify;
-        font-family: 'Libre Franklin', sans-serif;
-   }  
+
+  
    footer {
        @include footer;
        grid-area: footer;
@@ -285,11 +315,15 @@ footer {
    header {
        grid-area: header;
    }
+
    .formulario-contacto-principal {
+        @include fondo-contacto;
+       display: flex;
+       justify-content: space-around;
        grid-area: main;
-       background-color: antiquewhite;
        height: auto;
-       .formulario-contacto,textarea {
+       text-align: center;
+       .formulario-contacto,textarea{
         text-align: center;
         font-family: 'Roboto', sans-serif;
     }   
@@ -301,6 +335,7 @@ footer {
         color: white;
     }
         .formulario-contacto-style {
+            background-color: white;
             border-radius: 9px;
             border: 2px solid black;
             label {
@@ -327,28 +362,25 @@ footer {
                 &:hover {
                     color: $hover;
                 }
-            } 
+            }  
         }
+        .section-contactanos {
+            grid-area: section-contactanos;
+            .contactanos {
+                color: white;
+                padding: 25px 0px;
+                font-size: 2.1rem;
+            }
+            .text-contacto {
+                color: white;
+                text-align: center;
+                font-size: 1.2rem;
+                font-weight: bold;
+                padding: 5px;
+            }
+           } 
    }
-   .section-contactanos {
-    grid-area: section-contactanos;
-    width: 600px;
-    background-color: antiquewhite;
-        .contactanos {
-            text-align: center;
-            padding: 25px;
-        }
-        .mapa-contacto {
-            display: flex;
-            justify-content: center;
-        }
-        .text-contacto {
-            text-align: center;
-            font-size: 1.2rem;
-            font-weight: bold;
-            padding: 5px;
-        }
-   }
+   
    footer {
        grid-area: footer;
        @include footer;

@@ -37,7 +37,6 @@
                              "main main main"
                              "section-envios section-envios section-envios"
                              "footer footer footer";
-    
 }
 
 @mixin contenedor-grid-contacto {
@@ -82,6 +81,16 @@
     background-size: cover;
     grid-area: main;
     padding-top: 250px;
+}
+
+@mixin fondo-contacto {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5) ), url(../../img/chica-con-lentes-de-game-over-5834.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 

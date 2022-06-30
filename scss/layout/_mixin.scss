@@ -1,3 +1,5 @@
+/*displays*/
+
 @mixin display-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -43,7 +45,7 @@
     grid-template-columns: 3fr;
     grid-template-rows: repeat(3, auto);
     grid-template-areas: "header header header"
-                          "main section-contactanos section-contactanos"
+                          "main main main"
                           "footer footer footer";
 }
 
@@ -86,11 +88,143 @@
     background-image: linear-gradient(
         0deg,
         rgba(0, 0, 0, 0.9),
-        rgba(0, 0, 0, 0.9) ), url(../../img/fondo-contactos.png);
+        rgba(0, 0, 0, 0.9) ), url(../img/fondo-contactos.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
+
+@mixin main-eslogan {
+    color: $white;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    padding: 0 25px;
+    font-size: 2rem;
+}
+
+@mixin form {
+    display: flex;
+            justify-content: center;
+            padding-top: 50px;
+}
+
+@mixin section-sobre-nosotros {
+    height: 600px;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.9) ), url(../img/home-sobre-nosotros.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    grid-area: section-sobrenosotros;
+    padding-top: 80px;
+}
+
+@mixin h2-sobre-nosotros {
+    color: $white;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        font-size: 2.5rem;
+        font-style: italic;
+}
+
+@mixin p-sobre-nosotros {
+    color: $white;
+        padding: 50px 80px;
+        font-family: 'Libre Franklin', sans-serif;
+        font-size: 1.2rem;
+        text-align: center;
+}
+
+@mixin section-extra {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.9) ), url(../img/home-ademas.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 550px;
+    grid-area: section-extra;
+    padding: 15px;
+    text-align: center;
+}
+
+@mixin h2-extra {
+    color: $white;
+        font-family: 'Roboto', sans-serif;
+        padding-top: 50px;
+        font-size:  2.5rem;
+        text-transform: uppercase;
+}
+
+@mixin main-sobre-nosotros {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.9),
+        rgba(0,0,0,0.9) ), url(../img/fondo-sobre-nosotros.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        grid-area: main;
+        height: auto;
+}
+@mixin h2-sobre-nosotros {
+    color: $white;
+            font-style: italic;
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            font-size: 2rem;
+            padding: 35px 25px;
+}
+
+@mixin main-productos {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.9) ), url(../img/fondo-productos.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+       height: auto;
+       grid-area: main;
+}
+
+@mixin h2-main-productos {
+    padding: 10px;
+           height: 60px;
+           text-align: center;
+           background-color: $color-dos;
+           font-family: 'Roboto', sans-serif;
+           font-weight: bold;
+           text-transform: uppercase;
+           color: $white;
+}
+
+@mixin contenedor-envios {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.8) ), url(../img/fondo-envios.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+       height: 700px;
+       grid-area: main;
+       text-align: center;
+}
+@mixin input-form {
+                    text-align: center;
+                    background-color: $webkit-text;
+                    padding: 10px;
+                    border-radius: 15px;
+                    text-transform: uppercase;
+                    font-size: 0.9rem;
+                    color: $white;
+                    margin: 15px 5px;
+}
+
 
 @mixin footer {
     font-family: 'Roboto', sans-serif;

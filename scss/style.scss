@@ -10,13 +10,11 @@
 .contedor-grid {
    @include display-grid;
 }
-
 body .contenedor {
     padding-top: 20px;
     display: flex;
     justify-content: space-between;
 }
-
 header {
     height: 100px;
     background-color: $color;
@@ -33,15 +31,10 @@ header {
 }
 main {
     .main-eslogan {
-        color: white;
-        text-align: center;
-        font-family: 'Lato', sans-serif;
-        padding: 0 25px;
-        font-size: 2rem;}
+        @include main-eslogan;
+       }
         form {
-            display: flex;
-            justify-content: center;
-            padding-top: 50px;
+            @include form;
             button {
                 @extend %botones;
                 &:hover {
@@ -50,25 +43,13 @@ main {
             }
         }
 }
-.section-sobrenosotros {   
-    height: 600px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    grid-area: section-sobrenosotros;
-    padding-top: 80px;
+.section-sobrenosotros { 
+    @include section-sobre-nosotros;
     .h2-sobrenosotros {
-        text-align: center;
-        font-family: 'Roboto', sans-serif;
-        font-size: 2.5rem;
-        font-style: italic;
+        @include h2-sobre-nosotros;
     }
     .p-sobrenosotros {
-        padding: 50px 80px;
-        font-family: 'Libre Franklin', sans-serif;
-        font-weight: bold;
-        font-size: 1.2rem;
-        text-align: center;
+        @include p-sobre-nosotros;
     }
     form {
         padding-top: 5px;
@@ -84,11 +65,11 @@ main {
 .section-productos {
     height: 780px;
     grid-area: section-productos;
-    background-color: rgb(26, 26, 26);
+    background-color: $color;
     text-align: center;
-    color: white;
+    color: $white;
     .h2-productos {
-        padding: 10px;
+        padding: 15px;
         font-family: 'Libre Franklin', sans-serif;
         font-size: 2.4rem;
         text-transform: uppercase;
@@ -96,18 +77,12 @@ main {
 }
 
 .section-extra {
-    height: 550px;
-    background-color: rgb(248, 236, 222);
-    grid-area: section-extra;
-    padding: 15px;
-    text-align: center;
+    @include section-extra;
     .h2-extra {
-        font-family: 'Roboto', sans-serif;
-        padding-top: 50px;
-        font-size:  2.5rem;
-        text-transform: uppercase;
+        @include h2-extra;
     }
     .section-extra-contenido {
+        color: $white;
         font-size: 1.4rem;
         padding: 50px 30px;
         font-family: 'Libre Franklin', sans-serif;
@@ -136,26 +111,13 @@ header {
     grid-area: header; 
 }
 .main-sobre-nosotros{
-    background-image: linear-gradient(
-        0deg,
-        rgba(0,0,0,0.9),
-        rgba(0,0,0,0.9) ), url(../img/fondo-sobre-nosotros.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        grid-area: main;
-        height: auto;
+    @include main-sobre-nosotros;
         .h2-sobre-nosotros {
-            color: white;
-            font-style: italic;
-            text-align: center;
-            font-family: 'Roboto', sans-serif;
-            font-size: 2rem;
-            padding: 35px 25px ;
+            @include h2-sobre-nosotros;
         } 
     }
     .p1,.p2, .p3 {
-        color: rgb(255, 255, 255);
+        color: $white;
         text-align: center;
         padding: 5px 50px;
         font-family: 'Libre Franklin', sans-serif;
@@ -179,7 +141,7 @@ header {
     height: auto;
     display: flex;
     justify-content: space-evenly;
-    background-color: rgb(41, 41, 41);
+    background-color: $color;
     grid-area: contenedor-imagenes;
     .img-trabajadores {
         padding-top: 40px;
@@ -192,7 +154,7 @@ header {
                 @extend %transition-dos} 
         }
         .texto-empleados {
-            color: white;
+            color: $white;
             font-weight: bold;
             text-align: center;
             .p {
@@ -219,24 +181,9 @@ footer {
        grid-area: header;
    }
    .main-productos {
-    background-image: linear-gradient(
-        0deg,
-        rgba(0, 0, 0, 0.9),
-        rgba(0, 0, 0, 0.9) ), url(../img/fondo-productos.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-       height: auto;
-       grid-area: main;
+    @include main-productos;
        .h2-main-productos {
-           padding: 10px;
-           height: 60px;
-           text-align: center;
-           background-color: rgb(92, 27, 72);
-           font-family: 'Roboto', sans-serif;
-           font-weight: bold;
-           text-transform: uppercase;
-           color: white;
+           @include h2-main-productos;
        }
        .cartas-productos {
         padding-top: 30px;
@@ -254,7 +201,7 @@ footer {
             }
             .accordion-button {
                 width: 100px;
-                background-color: rgb(92, 27, 72);
+                background-color: $color-dos;
                 margin-top: 5px;
                 padding: 8px 20px;
                 border-radius: 5px;
@@ -271,21 +218,21 @@ footer {
             }
         }
         .texto-empresa {
-            color: white;
+            color: $white;
             padding: 10px 80px;
             font-size: 1rem;
             text-align: justify;
             font-family: 'Libre Franklin', sans-serif;
         }
         .texto-productos {
-            color: white;
+            color: $white;
             padding: 10px 80px;
             font-size: 0.9rem;
             text-align: justify;
             font-family: 'Libre Franklin', sans-serif;
        } 
        .separacion {
-        color:rgb(92, 27, 72) ;
+        color:$color-dos ;
         font-weight: bold;
         text-align: center;
         padding-top: 5px ; 
@@ -302,31 +249,29 @@ footer {
    .contenedor-grid-envios {
        @include display-grid-envios
    }
-
    header {
        grid-area: header;
    }
    .contenedor-envios {
-       height: 700px;
-       background-color: whitesmoke;
-       grid-area: main;
-       text-align: center;
+       @include contenedor-envios;
        h1 {
+        -webkit-text-stroke: 1px $webkit-text;
         font-weight: bold;
-        color:rgb(92, 27, 72);
+        color: $white;
         padding: 70px 50px;
        }
        p {
-        font-size: 1rem;
+        color: $white;
+        font-size: 1.1rem;
         padding: 0px 50px ;
        }
        h2 {
+        -webkit-text-stroke: 1px $webkit-text;
         font-weight: bold;
-        color:rgb(92, 27, 72);
+        color:$white;
         padding: 40px 50px;
        }
    }
-   
    footer {
        @include footer;
        grid-area: footer;
@@ -335,14 +280,12 @@ footer {
 
 
    /*CONTACTO*/
-
    .contenedor-grid-contacto {
        @include contenedor-grid-contacto;
    }
    header {
        grid-area: header;
    }
-
    .formulario-contacto-principal {
         @include fondo-contacto;
         grid-area: main;
@@ -350,7 +293,7 @@ footer {
         justify-content: space-around;
         .formulario-form{
             padding-top: 100px;
-           color: white;
+           color: $white;
            text-align: center; 
            .forms {
             display: flex;
@@ -362,8 +305,8 @@ footer {
                 background: none;
                 margin: 10px;
                 padding: 10px;
-                border-bottom: 1px solid white;
-                color: white;
+                border-bottom: 1px solid $white;
+                color: $white;
             }
            } 
            .formulario-contacto-buttons {
@@ -371,14 +314,7 @@ footer {
                     display: flex;
                     justify-content: center;
                     input{
-                    text-align: center;
-                    background-color: rgb(127, 3, 243);
-                    padding: 10px;
-                    border-radius: 15px;
-                    text-transform: uppercase;
-                    font-size: 0.9rem;
-                    color: white;
-                    margin: 15px 5px;
+                    @include input-form;
                     &:hover {
                         color: $hover;
                             }
@@ -388,15 +324,14 @@ footer {
         }
    }
    .section-contactanos {
-    grid-area: section-contactanos;
     .contactanos {
         text-align: center;
-        color: white;
+        color: $white;
         padding: 25px 0px;
         font-size: 2.1rem;
     }
     .text-contacto {
-        color: white;
+        color: $white;
         text-align: center;
         font-size: 1.2rem;
         font-weight: bold;

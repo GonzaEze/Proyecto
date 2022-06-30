@@ -27,9 +27,8 @@
         
     }
     .nav-config a:hover {
-        color: rgb(188, 151, 222);
+        color: $hover;
     }
-
     .main-fondo-home {
         height: 560px;
         background-image: linear-gradient(
@@ -40,15 +39,14 @@
         background-size: cover;
         background-position: center;
         grid-area: main;
-        padding-top: 200px;
+        padding-top: 150px;
     }
-    
     main .main-eslogan {
-        color: white;
+        color: $white;
         text-align: center;
         font-family: 'Lato', sans-serif;
-        padding: 20px 40px;
-        font-size: 1.8em;
+        padding: 0 50px;
+        font-size: 2rem;
         form {
             display: flex;
             justify-content: center;
@@ -67,46 +65,25 @@
         }
     }
 
-    form button:hover{
-       color: rgb(188, 151, 222);;
-    }
-    
     .section-sobrenosotros {
-        height: 600px;
-        background-color: rgb(245, 245, 245);
+        height: 750px;
         grid-area: section-sobrenosotros;
-        padding-top: 50px;
-        text-align: center;
+        padding-top: 80px;
         .h2-sobrenosotros {
-            font-family: 'Roboto', sans-serif;
-            font-size: 2rem;
         }
         .p-sobrenosotros {
-            padding: 35px 30px;
-            font-family: 'Libre Franklin', sans-serif;
-            font-size: 1.2rem;
+            padding: 35px 50px;
         }
         form {
             padding-top: 5px;
-            button {
-                background-color: blueviolet;
-                padding: 15px;
-                border-radius: 10px;
-                font-size: 1.5rem;
-                color: white;
-                font-family: 'Rubik', sans-serif;
-            }
+                }
         }
-    }
-
-    form button:hover {
-        color: rgb(181, 131, 232);
     }
     
     .section-productos {
-        height: 550px;
+        height: 450px;
         grid-area: section-productos;
-        background-color: rgb(26, 26, 26);
+        background-color: rgb(0, 0, 0);
         text-align: center;
         color: white;
         .h2-productos {
@@ -116,18 +93,12 @@
             text-transform: uppercase;
         }
     }
-     
     .section-extra {
-        height: 400px;
-        background-color: rgb(248, 236, 222);
+        height: 500px;
         grid-area: section-extra;
-        padding: 15px;
-        text-align: center;
+        padding: 50px;
         .h2-extra {
-            font-family: 'Roboto', sans-serif;
-            padding-top: 20px;
-            font-size:  2rem;
-            text-transform: uppercase;
+            padding-top: 25px;
         }
         .section-extra-contenido {
             font-size: 1.2rem;
@@ -136,31 +107,12 @@
         }
         form {
             padding-top: 15px;
-            button {
-                background-color: blueviolet;
-                padding: 15px;
-                border-radius: 10px;
-                font-size: 1.5rem;
-                color: white;
-                font-family: 'Rubik', sans-serif;
-                &:hover {
-                    color: $hover;
-                    }
-            }
         }
     }
 
-    }
     
     footer {
-        font-family: 'Roboto', sans-serif;
-        height: 130px;
-        padding: 15px;
-        background-color: rgb(54, 53, 53);
-        text-align: center;
-        grid-area: footer;
-        color: white;
-        display: relative;
+        @include footer;
     }
 
 
@@ -191,19 +143,13 @@
         height: 200px;
         background-color: rgb(0, 0, 0);
         grid-area: header;
-        .p-logo {
-            padding: 10px 0;
-            text-align: center;
-            font-family: 'Lato', sans-serif;
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: white;  
-        }
         
     }
-       
+    .nav-config a:hover {
+        color: $hover;
+    }
     .main-fondo-home {
-        height: 800px;
+        height: 500px;
         background-image: linear-gradient(
         0deg,
         rgba(0,0,0,0.7),
@@ -212,122 +158,79 @@
         background-size: cover;
         background-position: center;
         grid-area: main;
-        padding-top: 300px;
+        padding-top: 150px;
     }
-    
     main .main-eslogan {
-        color: white;
+        color: $white;
         text-align: center;
         font-family: 'Lato', sans-serif;
-        padding: 50px;
-        font-size: 1.9em;
+        padding: 0 50px;
+        font-size: 2rem;
         form {
             display: flex;
             justify-content: center;
             padding-top: 50px;
             button {
                 background-color: blueviolet;
-                padding: 25px;
-                text-transform: uppercase;
-                border-radius: 10px;
-                font-size: 2.3rem;
-                color: white;
-                font-family: 'Rubik', sans-serif;
-                &:hover {
-                    color: $hover;
-                }
-            }
-        }
-    }
-
-    .section-sobrenosotros {
-        height: 700px;
-        background-color: rgb(245, 245, 245);
-        grid-area: section-sobrenosotros;
-        padding-top: 100px;
-        text-align: center;
-    }
-    
-    section .h2-sobrenosotros {
-        font-family: 'Roboto', sans-serif;
-        font-size: 2.5rem;
-        .p-sobrenosotros {
-            padding: 35px 30px;
-            font-family: 'Libre Franklin', sans-serif;
-            font-size: 1.5rem;
-        }
-        form {
-            padding-top: 5px;
-            button {
-                background-color: blueviolet;
-                padding: 15px;
-                border-radius: 10px;
-                font-size: 2.3rem;
-                color: white;
-                font-family: 'Rubik', sans-serif;
-                &:hover {
-                    color: $hover;
-                }
-            }
-        }
-    }
-    
-    .section-productos {
-        height: 750px;
-        grid-area: section-productos;
-        background-color: rgb(26, 26, 26);
-        text-align: center;
-        color: white;
-        .h2-productos {
-            padding: 15px;
-            font-family: 'Libre Franklin', sans-serif;
-            font-size: 2rem;
-            text-transform: uppercase;
-        }
-    }
-   
-    .section-extra {
-        height: 500px;
-        background-color: rgb(248, 236, 222);
-        grid-area: section-extra;
-        padding: 25px;
-        text-align: center;
-        .h2-extra {
-            font-family: 'Roboto', sans-serif;
-            padding: 20px 0px;
-            font-size: 2.5rem;
-            text-transform: uppercase;
-        }
-        .section-extra-contenido {
-            font-size: 1.5rem;
-            padding: 10px 30px;
-            font-family: 'Libre Franklin', sans-serif;
-        }
-        form {
-            padding-top: 15px;
-            button {
-                background-color: blueviolet;
-                padding: 15px;
+                padding: 10px;
                 border-radius: 10px;
                 font-size: 1.5rem;
                 color: white;
                 font-family: 'Rubik', sans-serif;
                 &:hover {
                     color: $hover;
-                }
+                                }
             }
         }
     }
+
+    .section-sobrenosotros {
+        height: 600px;
+        grid-area: section-sobrenosotros;
+        padding-top: 80px;
+        .h2-sobrenosotros {
+            margin-top: -20px;
+        }
+        .p-sobrenosotros {
+            padding: 35px 50px;
+        }
+        form {
+            padding-top: 5px;
+                }
+        }
+    }
     
+    .section-productos {
+        height: 600px;
+        grid-area: section-productos;
+        background-color: rgb(0, 0, 0);
+        text-align: center;
+        color: white;
+        .h2-productos {
+            padding: 20px;
+            font-family: 'Libre Franklin', sans-serif;
+            font-size: 2rem;
+            text-transform: uppercase;
+        }
+    }
+    .section-extra {
+        height: 40px;
+        grid-area: section-extra;
+        padding: 50px;
+        .h2-extra {
+            padding-top: 25px;
+        }
+        .section-extra-contenido {
+            font-size: 1.2rem;
+            padding: 15px 30px;
+            font-family: 'Libre Franklin', sans-serif;
+        }
+        form {
+            padding-top: 15px;
+        }
+    }
+
     
     footer {
-        font-family: 'Roboto', sans-serif;
-        height: 130px;
-        padding: 15px;
-        background-color: rgb(54, 53, 53);
-        text-align: center;
-        grid-area: footer;
-        color: white;
-        display: relative;
+        @include footer;
     }
-}

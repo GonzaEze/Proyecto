@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box; }
 
+/*displays*/
 main form button, .section-sobrenosotros form button, .section-extra form button {
   background-color: blueviolet;
   padding: 15px;
@@ -77,20 +78,23 @@ main form {
 
 .section-sobrenosotros {
   height: 600px;
-  background-position: center;
-  background-size: cover;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(../img/home-sobre-nosotros.png);
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   grid-area: section-sobrenosotros;
   padding-top: 80px; }
   .section-sobrenosotros .h2-sobrenosotros {
+    color: white;
+    font-style: italic;
     text-align: center;
     font-family: 'Roboto', sans-serif;
-    font-size: 2.5rem;
-    font-style: italic; }
+    font-size: 2rem;
+    padding: 35px 25px; }
   .section-sobrenosotros .p-sobrenosotros {
+    color: white;
     padding: 50px 80px;
     font-family: 'Libre Franklin', sans-serif;
-    font-weight: bold;
     font-size: 1.2rem;
     text-align: center; }
   .section-sobrenosotros form {
@@ -102,27 +106,32 @@ main form {
 .section-productos {
   height: 780px;
   grid-area: section-productos;
-  background-color: #1a1a1a;
+  background-color: black;
   text-align: center;
   color: white; }
   .section-productos .h2-productos {
-    padding: 10px;
+    padding: 15px;
     font-family: 'Libre Franklin', sans-serif;
     font-size: 2.4rem;
     text-transform: uppercase; }
 
 .section-extra {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(../img/home-ademas.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   height: 550px;
-  background-color: #f8ecde;
   grid-area: section-extra;
   padding: 15px;
   text-align: center; }
   .section-extra .h2-extra {
+    color: white;
     font-family: 'Roboto', sans-serif;
     padding-top: 50px;
     font-size: 2.5rem;
     text-transform: uppercase; }
   .section-extra .section-extra-contenido {
+    color: white;
     font-size: 1.4rem;
     padding: 50px 30px;
     font-family: 'Libre Franklin', sans-serif; }
@@ -157,7 +166,7 @@ footer {
     background-color: black;
     grid-area: header; }
   .nav-config a:hover {
-    color: #bc97de; }
+    color: #dec6f4; }
   .main-fondo-home {
     height: 560px;
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/home.png);
@@ -165,13 +174,13 @@ footer {
     background-size: cover;
     background-position: center;
     grid-area: main;
-    padding-top: 200px; }
+    padding-top: 150px; }
   main .main-eslogan {
     color: white;
     text-align: center;
     font-family: 'Lato', sans-serif;
-    padding: 20px 40px;
-    font-size: 1.8em; }
+    padding: 0 50px;
+    font-size: 2rem; }
     main .main-eslogan form {
       display: flex;
       justify-content: center;
@@ -185,74 +194,44 @@ footer {
         font-family: 'Rubik', sans-serif; }
         main .main-eslogan form button:hover {
           color: #dec6f4; }
-  form button:hover {
-    color: #bc97de; }
   .section-sobrenosotros {
-    height: 600px;
-    background-color: whitesmoke;
+    height: 750px;
     grid-area: section-sobrenosotros;
-    padding-top: 50px;
-    text-align: center; }
-    .section-sobrenosotros .h2-sobrenosotros {
-      font-family: 'Roboto', sans-serif;
-      font-size: 2rem; }
+    padding-top: 80px; }
     .section-sobrenosotros .p-sobrenosotros {
-      padding: 35px 30px;
-      font-family: 'Libre Franklin', sans-serif;
-      font-size: 1.2rem; }
+      padding: 35px 50px; }
     .section-sobrenosotros form {
-      padding-top: 5px; }
-      .section-sobrenosotros form button {
-        background-color: blueviolet;
-        padding: 15px;
-        border-radius: 10px;
-        font-size: 1.5rem;
-        color: white;
-        font-family: 'Rubik', sans-serif; }
-  form button:hover {
-    color: #b583e8; }
-  .section-productos {
-    height: 550px;
-    grid-area: section-productos;
-    background-color: #1a1a1a;
-    text-align: center;
-    color: white; }
-    .section-productos .h2-productos {
-      padding: 20px;
-      font-family: 'Libre Franklin', sans-serif;
-      font-size: 2rem;
-      text-transform: uppercase; }
-  .section-extra {
-    height: 400px;
-    background-color: #f8ecde;
-    grid-area: section-extra;
-    padding: 15px;
-    text-align: center; }
-    .section-extra .h2-extra {
-      font-family: 'Roboto', sans-serif;
-      padding-top: 20px;
-      font-size: 2rem;
-      text-transform: uppercase; }
-    .section-extra .section-extra-contenido {
-      font-size: 1.2rem;
-      padding: 15px 30px;
-      font-family: 'Libre Franklin', sans-serif; }
-    .section-extra form {
-      padding-top: 15px; }
-      .section-extra form button {
-        background-color: blueviolet;
-        padding: 15px;
-        border-radius: 10px;
-        font-size: 1.5rem;
-        color: white;
-        font-family: 'Rubik', sans-serif; }
-        .section-extra form button:hover {
-          color: #dec6f4; } }
+      padding-top: 5px; } }
+
+.section-productos {
+  height: 450px;
+  grid-area: section-productos;
+  background-color: black;
+  text-align: center;
+  color: white; }
+  .section-productos .h2-productos {
+    padding: 20px;
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 2rem;
+    text-transform: uppercase; }
+
+.section-extra {
+  height: 500px;
+  grid-area: section-extra;
+  padding: 50px; }
+  .section-extra .h2-extra {
+    padding-top: 25px; }
+  .section-extra .section-extra-contenido {
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    font-family: 'Libre Franklin', sans-serif; }
+  .section-extra form {
+    padding-top: 15px; }
 
 footer {
   font-family: 'Roboto', sans-serif;
-  height: 130px;
-  padding: 15px;
+  height: 125px;
+  padding: 5px;
   background-color: #363535;
   text-align: center;
   grid-area: footer;
@@ -274,111 +253,80 @@ footer {
     height: 200px;
     background-color: black;
     grid-area: header; }
-    header .p-logo {
-      padding: 10px 0;
-      text-align: center;
-      font-family: 'Lato', sans-serif;
-      font-size: 2.5rem;
-      font-weight: bold;
-      color: white; }
+  .nav-config a:hover {
+    color: #dec6f4; }
   .main-fondo-home {
-    height: 800px;
+    height: 500px;
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/home.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     grid-area: main;
-    padding-top: 300px; }
+    padding-top: 150px; }
   main .main-eslogan {
     color: white;
     text-align: center;
     font-family: 'Lato', sans-serif;
-    padding: 50px;
-    font-size: 1.9em; }
+    padding: 0 50px;
+    font-size: 2rem; }
     main .main-eslogan form {
       display: flex;
       justify-content: center;
       padding-top: 50px; }
       main .main-eslogan form button {
         background-color: blueviolet;
-        padding: 25px;
-        text-transform: uppercase;
+        padding: 10px;
         border-radius: 10px;
-        font-size: 2.3rem;
+        font-size: 1.5rem;
         color: white;
         font-family: 'Rubik', sans-serif; }
         main .main-eslogan form button:hover {
           color: #dec6f4; }
   .section-sobrenosotros {
-    height: 700px;
-    background-color: whitesmoke;
+    height: 600px;
     grid-area: section-sobrenosotros;
-    padding-top: 100px;
-    text-align: center; }
-  section .h2-sobrenosotros {
-    font-family: 'Roboto', sans-serif;
-    font-size: 2.5rem; }
-    section .h2-sobrenosotros .p-sobrenosotros {
-      padding: 35px 30px;
-      font-family: 'Libre Franklin', sans-serif;
-      font-size: 1.5rem; }
-    section .h2-sobrenosotros form {
-      padding-top: 5px; }
-      section .h2-sobrenosotros form button {
-        background-color: blueviolet;
-        padding: 15px;
-        border-radius: 10px;
-        font-size: 2.3rem;
-        color: white;
-        font-family: 'Rubik', sans-serif; }
-        section .h2-sobrenosotros form button:hover {
-          color: #dec6f4; }
-  .section-productos {
-    height: 750px;
-    grid-area: section-productos;
-    background-color: #1a1a1a;
-    text-align: center;
-    color: white; }
-    .section-productos .h2-productos {
-      padding: 15px;
-      font-family: 'Libre Franklin', sans-serif;
-      font-size: 2rem;
-      text-transform: uppercase; }
-  .section-extra {
-    height: 500px;
-    background-color: #f8ecde;
-    grid-area: section-extra;
-    padding: 25px;
-    text-align: center; }
-    .section-extra .h2-extra {
-      font-family: 'Roboto', sans-serif;
-      padding: 20px 0px;
-      font-size: 2.5rem;
-      text-transform: uppercase; }
-    .section-extra .section-extra-contenido {
-      font-size: 1.5rem;
-      padding: 10px 30px;
-      font-family: 'Libre Franklin', sans-serif; }
-    .section-extra form {
-      padding-top: 15px; }
-      .section-extra form button {
-        background-color: blueviolet;
-        padding: 15px;
-        border-radius: 10px;
-        font-size: 1.5rem;
-        color: white;
-        font-family: 'Rubik', sans-serif; }
-        .section-extra form button:hover {
-          color: #dec6f4; }
-  footer {
-    font-family: 'Roboto', sans-serif;
-    height: 130px;
-    padding: 15px;
-    background-color: #363535;
-    text-align: center;
-    grid-area: footer;
-    color: white;
-    display: relative; } }
+    padding-top: 80px; }
+    .section-sobrenosotros .h2-sobrenosotros {
+      margin-top: -20px; }
+    .section-sobrenosotros .p-sobrenosotros {
+      padding: 35px 50px; }
+    .section-sobrenosotros form {
+      padding-top: 5px; } }
+
+.section-productos {
+  height: 600px;
+  grid-area: section-productos;
+  background-color: black;
+  text-align: center;
+  color: white; }
+  .section-productos .h2-productos {
+    padding: 20px;
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 2rem;
+    text-transform: uppercase; }
+
+.section-extra {
+  height: 40px;
+  grid-area: section-extra;
+  padding: 50px; }
+  .section-extra .h2-extra {
+    padding-top: 25px; }
+  .section-extra .section-extra-contenido {
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    font-family: 'Libre Franklin', sans-serif; }
+  .section-extra form {
+    padding-top: 15px; }
+
+footer {
+  font-family: 'Roboto', sans-serif;
+  height: 125px;
+  padding: 5px;
+  background-color: #363535;
+  text-align: center;
+  grid-area: footer;
+  color: white;
+  display: relative; }
 
 /* SOBRE NOSOTROS*/
 .contenedor-grid-sobrenosotros {
@@ -426,7 +374,7 @@ header {
   height: auto;
   display: flex;
   justify-content: space-evenly;
-  background-color: #292929;
+  background-color: black;
   grid-area: contenedor-imagenes; }
   .contenedor-imagenes .img-trabajadores {
     padding-top: 40px; }
@@ -461,72 +409,73 @@ footer {
   .contenedor-grid-sobrenosotros {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(5, auto);
-    grid-template-areas: "header" "main" "img-sobrenosotros" "contenedor-imagenes" "footer"; }
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "header" "main" "contenedor-imagenes" "footer"; }
   header {
     grid-area: header; }
-  main {
-    height: 600px;
-    grid-area: main; }
-  main .h1-sobrenosotros {
-    font-family: 'Roboto', sans-serif;
-    font-size: 2rem;
-    text-align: center;
-    padding: 90px 30px; }
-  .main-sobrenosotros p {
-    padding: 20px 30px;
-    text-align: justify;
-    font-family: 'Libre Franklin', sans-serif; }
-  .img-sobrenosotros img {
-    display: none; }
-  .contenedor-imagenes {
-    height: 150px;
-    background-image: url(../img/fondo1.jpg);
-    background-position: center;
+  .main-sobre-nosotros {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(../img/fondo-sobre-nosotros.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #37fdbb;
-    grid-area: contenedor-imagenes; }
-    .contenedor-imagenes .img-trabajadores {
+    background-position: center;
+    grid-area: main;
+    height: auto; }
+    .main-sobre-nosotros .p1, .main-sobre-nosotros .p2, .main-sobre-nosotros .p3 {
+      color: white;
+      text-align: center;
+      padding: 5px 50px;
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 1.1rem; }
+    .main-sobre-nosotros .img-sobrenosotros {
       display: none; }
+  .contenedor-imagenes {
+    display: none; }
   footer {
-    grid-area: footer; } }
+    grid-area: footer;
+    font-family: 'Roboto', sans-serif;
+    height: 125px;
+    padding: 5px;
+    background-color: #363535;
+    text-align: center;
+    grid-area: footer;
+    color: white;
+    display: relative; } }
 
-/*media query Tablet Sobre Nosotros*/
 @media screen and (min-width: 600px) and (max-width: 1200px) {
   .contenedor-grid-sobrenosotros {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(5, auto);
-    grid-template-areas: "header" "main" "img-sobrenosotros" "contenedor-imagenes" "footer"; }
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "header" "main" "contenedor-imagenes" "footer"; }
   header {
     grid-area: header; }
-  main {
-    height: 1000px;
-    grid-area: main; }
-  main .h1-sobrenosotros {
-    font-family: 'Roboto', sans-serif;
-    font-size: 2rem;
-    text-align: center;
-    padding-top: 60px; }
-  .main-sobrenosotros p {
-    padding: 40px 50px;
-    font-family: 'Libre Franklin', sans-serif;
-    text-align: justify;
-    font-size: 1.2rem; }
-  .img-sobrenosotros img {
-    display: none; }
-  .contenedor-imagenes {
-    height: 300px;
-    background-color: black;
-    background-position: center;
+  .main-sobre-nosotros {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(../img/fondo-sobre-nosotros.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+    grid-area: main;
+    height: auto; }
+    .main-sobre-nosotros .p1, .main-sobre-nosotros .p2, .main-sobre-nosotros .p3 {
+      color: white;
+      text-align: center;
+      padding: 5px 50px;
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 1.2rem; }
+    .main-sobre-nosotros .img-sobrenosotros {
+      display: none; }
+  .contenedor-imagenes {
     grid-area: contenedor-imagenes; }
-    .contenedor-imagenes .img-trabajadores {
-      display: flex; }
   footer {
-    grid-area: footer; } }
+    grid-area: footer;
+    font-family: 'Roboto', sans-serif;
+    height: 125px;
+    padding: 5px;
+    background-color: #363535;
+    text-align: center;
+    grid-area: footer;
+    color: white;
+    display: relative; } }
 
 /*productos*/
 .contenedor-productos {
@@ -709,20 +658,26 @@ header {
   grid-area: header; }
 
 .contenedor-envios {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../img/fondo-envios.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   height: 700px;
-  background-color: whitesmoke;
   grid-area: main;
   text-align: center; }
   .contenedor-envios h1 {
+    -webkit-text-stroke: 1px #ff59cd;
     font-weight: bold;
-    color: #5c1b48;
+    color: white;
     padding: 70px 50px; }
   .contenedor-envios p {
-    font-size: 1rem;
+    color: white;
+    font-size: 1.1rem;
     padding: 0px 50px; }
   .contenedor-envios h2 {
+    -webkit-text-stroke: 1px #ff59cd;
     font-weight: bold;
-    color: #5c1b48;
+    color: white;
     padding: 40px 50px; }
 
 footer {
@@ -837,13 +792,13 @@ footer {
   display: grid;
   grid-template-columns: 3fr;
   grid-template-rows: repeat(3, auto);
-  grid-template-areas: "header header header" "main section-contactanos section-contactanos" "footer footer footer"; }
+  grid-template-areas: "header header header" "main main main" "footer footer footer"; }
 
 header {
   grid-area: header; }
 
 .formulario-contacto-principal {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(../../img/fondo-contactos.png);
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(../img/fondo-contactos.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -871,7 +826,7 @@ header {
       justify-content: center; }
       .formulario-contacto-principal .formulario-form .formulario-contacto-buttons .input-contacto input {
         text-align: center;
-        background-color: #7f03f3;
+        background-color: #ff59cd;
         padding: 10px;
         border-radius: 15px;
         text-transform: uppercase;
@@ -881,19 +836,18 @@ header {
         .formulario-contacto-principal .formulario-form .formulario-contacto-buttons .input-contacto input:hover {
           color: #dec6f4; }
 
-.section-contactanos {
-  grid-area: section-contactanos; }
-  .section-contactanos .contactanos {
-    text-align: center;
-    color: white;
-    padding: 25px 0px;
-    font-size: 2.1rem; }
-  .section-contactanos .text-contacto {
-    color: white;
-    text-align: center;
-    font-size: 1.2rem;
-    font-weight: bold;
-    padding: 5px; }
+.section-contactanos .contactanos {
+  text-align: center;
+  color: white;
+  padding: 25px 0px;
+  font-size: 2.1rem; }
+
+.section-contactanos .text-contacto {
+  color: white;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 5px; }
 
 footer {
   grid-area: footer;
@@ -909,61 +863,38 @@ footer {
 @media screen and (max-width: 600px) {
   .contenedor-grid-contacto {
     display: grid;
-    grid-template-columns: 4fr;
+    grid-template-columns: 3fr;
     grid-template-rows: repeat(1, auto);
-    grid-template-areas: "header" "main"  "section-contactanos" "footer"; }
+    grid-template-areas: "header" "main"  "footer"; }
   header {
     grid-area: header; }
   .formulario-contacto-principal {
+    display: flex;
+    flex-direction: column;
     grid-area: main;
-    background-color: antiquewhite;
     height: auto; }
-    .formulario-contacto-principal .formulario-contacto, .formulario-contacto-principal textarea {
-      text-align: center;
-      font-family: 'Roboto', sans-serif; }
-    .formulario-contacto-principal legend {
-      border-radius: 9px;
-      background-color: black;
-      font-size: 2rem;
-      padding: 15px 15px;
-      color: white; }
-    .formulario-contacto-principal .formulario-contacto-style {
-      border-radius: 9px;
-      border: 2px solid black; }
-      .formulario-contacto-principal .formulario-contacto-style label {
+    .formulario-contacto-principal .formulario-form {
+      padding-top: 50px;
+      color: white;
+      text-align: center; }
+      .formulario-contacto-principal .formulario-form .forms {
         display: flex;
         flex-direction: column;
-        margin: 15px;
-        font-size: 1.5rem; }
-      .formulario-contacto-principal .formulario-contacto-style input, .formulario-contacto-principal .formulario-contacto-style textarea {
-        text-align: center;
-        padding: 15px 15px;
-        background-color: #d4ffff; }
-    .formulario-contacto-principal .formulario-contacto-buttons input {
-      background-color: #7f03f3;
-      padding: 10px;
-      border-radius: 15px;
-      text-transform: uppercase;
-      font-size: 0.9rem;
-      color: white;
-      margin: 15px 5px; }
-      .formulario-contacto-principal .formulario-contacto-buttons input:hover {
-        color: #dec6f4; }
-  .section-contactanos {
-    grid-area: section-contactanos;
-    width: auto;
-    background-color: antiquewhite; }
-    .section-contactanos .contactanos {
-      text-align: center;
-      padding: 25px; }
-    .section-contactanos .mapa-contacto {
+        width: 500px; }
+        .formulario-contacto-principal .formulario-form .forms input, .formulario-contacto-principal .formulario-form .forms textarea {
+          text-align: center;
+          border: none;
+          background: none;
+          margin: 10px;
+          padding: 10px;
+          border-bottom: 1px solid white;
+          color: white; }
+      .formulario-contacto-principal .formulario-form .formulario-contacto-buttons {
+        padding-bottom: 100px; }
+    .formulario-contacto-principal .section-contactanos .mapa-contacto {
       display: flex;
-      justify-content: center; }
-    .section-contactanos .text-contacto {
-      text-align: center;
-      font-size: 1.2rem;
-      font-weight: bold;
-      padding: 5px; }
+      justify-content: center;
+      padding: 25px 25px; }
   footer {
     grid-area: footer;
     font-family: 'Roboto', sans-serif;
@@ -978,61 +909,45 @@ footer {
 @media screen and (min-width: 600px) and (max-width: 1200px) {
   .contenedor-grid-contacto {
     display: grid;
-    grid-template-columns: 4fr;
+    grid-template-columns: 3fr;
     grid-template-rows: repeat(1, auto);
-    grid-template-areas: "header" "main"  "section-contactanos" "footer"; }
+    grid-template-areas: "header" "main"  "footer"; }
   header {
     grid-area: header; }
   .formulario-contacto-principal {
+    display: flex;
+    flex-direction: column;
     grid-area: main;
-    background-color: antiquewhite;
     height: auto; }
-    .formulario-contacto-principal .formulario-contacto, .formulario-contacto-principal textarea {
-      text-align: center;
-      font-family: 'Roboto', sans-serif; }
-    .formulario-contacto-principal legend {
-      border-radius: 9px;
-      background-color: black;
-      font-size: 2rem;
-      padding: 15px 15px;
-      color: white; }
-    .formulario-contacto-principal .formulario-contacto-style {
-      border-radius: 9px;
-      border: 2px solid black; }
-      .formulario-contacto-principal .formulario-contacto-style label {
+    .formulario-contacto-principal .formulario-form {
+      padding-top: 50px;
+      color: white;
+      text-align: center; }
+      .formulario-contacto-principal .formulario-form legend {
+        font-size: 2rem;
+        padding-bottom: 20px; }
+      .formulario-contacto-principal .formulario-form .forms {
         display: flex;
         flex-direction: column;
-        margin: 15px;
-        font-size: 1.5rem; }
-      .formulario-contacto-principal .formulario-contacto-style input, .formulario-contacto-principal .formulario-contacto-style textarea {
-        text-align: center;
-        padding: 15px 15px;
-        background-color: #d4ffff; }
-    .formulario-contacto-principal .formulario-contacto-buttons input {
-      background-color: #7f03f3;
-      padding: 10px;
-      border-radius: 15px;
-      text-transform: uppercase;
-      font-size: 0.9rem;
-      color: white;
-      margin: 15px 5px; }
-      .formulario-contacto-principal .formulario-contacto-buttons input:hover {
-        color: #dec6f4; }
-  .section-contactanos {
-    grid-area: section-contactanos;
-    width: auto;
-    background-color: antiquewhite; }
-    .section-contactanos .contactanos {
-      text-align: center;
-      padding: 25px; }
-    .section-contactanos .mapa-contacto {
+        width: 700px; }
+        .formulario-contacto-principal .formulario-form .forms input, .formulario-contacto-principal .formulario-form .forms textarea {
+          font-size: 1.2rem;
+          text-align: center;
+          border: none;
+          background: none;
+          margin: 25px;
+          padding: 10px;
+          border-bottom: 2px solid white;
+          color: white; }
+      .formulario-contacto-principal .formulario-form .formulario-contacto-buttons {
+        padding-bottom: 100px; }
+    .formulario-contacto-principal .section-contactanos .mapa-contacto {
       display: flex;
-      justify-content: center; }
-    .section-contactanos .text-contacto {
-      text-align: center;
-      font-size: 1.2rem;
-      font-weight: bold;
-      padding: 5px; }
+      justify-content: center;
+      padding: 25px 25px; }
+      .formulario-contacto-principal .section-contactanos .mapa-contacto iframe {
+        width: 800px;
+        height: 600px; }
   footer {
     grid-area: footer;
     font-family: 'Roboto', sans-serif;

@@ -136,9 +136,17 @@ header {
     grid-area: header; 
 }
 .main-sobre-nosotros{
-    grid-area: main;
-    height: 720px;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.9),
+        rgba(0,0,0,0.9) ), url(../img/fondo-sobre-nosotros.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        grid-area: main;
+        height: auto;
         .h2-sobre-nosotros {
+            color: white;
             font-style: italic;
             text-align: center;
             font-family: 'Roboto', sans-serif;
@@ -147,16 +155,24 @@ header {
         } 
     }
     .p1,.p2, .p3 {
-        color: rgb(49, 49, 49);
-        text-align: justify;
+        color: rgb(255, 255, 255);
+        text-align: center;
         padding: 5px 50px;
         font-family: 'Libre Franklin', sans-serif;
         font-size: 1.1rem;
     }
 .img-sobrenosotros{
-    grid-area: img-sobrenosotros;
-    img{
-        margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    img {
+        padding-bottom: 20px;
+        border-radius: 20px;
+        width: 500px;
+        height: 350px;
+        margin: 10px;
+        &:hover {
+           @extend %transition-tres; 
+        }
     }
 }
 .contenedor-imagenes {
@@ -202,14 +218,21 @@ footer {
    header{
        grid-area: header;
    }
-   main {
+   .main-productos {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.9) ), url(../img/fondo-productos.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
        height: auto;
        grid-area: main;
        .h2-main-productos {
            padding: 10px;
            height: 60px;
            text-align: center;
-           background-color: rgb(52, 52, 52);
+           background-color: rgb(92, 27, 72);
            font-family: 'Roboto', sans-serif;
            font-weight: bold;
            text-transform: uppercase;
@@ -224,13 +247,20 @@ footer {
             height: auto;
             text-align: center;
             &:hover{
-                box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+                box-shadow:  5px 5px 20px rgba(255, 91, 206, 0.5);
                 transform: translateY(-3%);}
             .card-img-top{
-                border-radius: 10px;
-                &:hover{
-                    @extend %transition-dos} 
+                border-radius: 10px;}
             }
+            .accordion-button {
+                width: 100px;
+                background-color: rgb(92, 27, 72);
+                margin-top: 5px;
+                padding: 8px 20px;
+                border-radius: 5px;
+            }
+            .accordion-body{
+                margin-top: 25px;
             }
             .card-title {
                 padding-top: 7px;
@@ -240,24 +270,34 @@ footer {
                 text-align: center;
             }
         }
-        .linea-rainbow {
-            padding: 30px 40px;
-        }
-        .texto-productos {
-            padding: 10px 50px;
-            font-size: 1.1rem;
+        .texto-empresa {
+            color: white;
+            padding: 10px 80px;
+            font-size: 1rem;
             text-align: justify;
             font-family: 'Libre Franklin', sans-serif;
-       }  
+        }
+        .texto-productos {
+            color: white;
+            padding: 10px 80px;
+            font-size: 0.9rem;
+            text-align: justify;
+            font-family: 'Libre Franklin', sans-serif;
+       } 
+       .separacion {
+        color:rgb(92, 27, 72) ;
+        font-weight: bold;
+        text-align: center;
+        padding-top: 5px ; 
+       } 
     }
-
-  
    footer {
        @include footer;
        grid-area: footer;
    }
-
    @import "layout/media-querys/media-productos.scss";
+
+
 /*ENVIOS*/
    .contenedor-grid-envios {
        @include display-grid-envios
@@ -266,40 +306,27 @@ footer {
    header {
        grid-area: header;
    }
-   main {
-       grid-area: main;
-   }
    .contenedor-envios {
-       background-color: rgb(218, 255, 243);
-       height: 290px;
+       height: 700px;
+       background-color: whitesmoke;
+       grid-area: main;
+       text-align: center;
        h1 {
-        font-family: 'Roboto', sans-serif;
-        font-size: 2rem;
-        text-align: center;
-        padding: 25px;
-    }
-    .envios1, .envios2 {
-        font-family: 'Libre Franklin', sans-serif;
-        text-align: justify;
-        padding: 5px 25px;
-    }
+        font-weight: bold;
+        color:rgb(92, 27, 72);
+        padding: 70px 50px;
+       }
+       p {
+        font-size: 1rem;
+        padding: 0px 50px ;
+       }
+       h2 {
+        font-weight: bold;
+        color:rgb(92, 27, 72);
+        padding: 40px 50px;
+       }
    }
-   .section-envios {
-       background-color: rgb(218, 255, 243);
-       display: flex;
-       flex-direction: column column;
-       grid-area: section-envios;
-       .section1, .section2 {
-        font-family: 'Libre Franklin', sans-serif;
-        text-align: justify;
-        padding: 5px 25px;
-    }
-    img {
-        display: flex;
-        padding: 10px;
-        height: 100px;
-    }
-   }
+   
    footer {
        @include footer;
        grid-area: footer;
@@ -318,68 +345,64 @@ footer {
 
    .formulario-contacto-principal {
         @include fondo-contacto;
-       display: flex;
-       justify-content: space-around;
-       grid-area: main;
-       height: auto;
-       text-align: center;
-       .formulario-contacto,textarea{
-        text-align: center;
-        font-family: 'Roboto', sans-serif;
-    }   
-        legend {
-        border-radius: 9px;
-        background-color: black;
-        font-size: 2rem;
-        padding: 15px 15px;
-        color: white;
-    }
-        .formulario-contacto-style {
-            background-color: white;
-            border-radius: 9px;
-            border: 2px solid black;
-            label {
-                display: flex;
-                flex-direction: column;
-                margin: 15px;
-                font-size: 1.5rem;
-            }
+        grid-area: main;
+        display: flex;
+        justify-content: space-around;
+        .formulario-form{
+            padding-top: 100px;
+           color: white;
+           text-align: center; 
+           .forms {
+            display: flex;
+            flex-direction: column;
+            width: 30vw;
             input, textarea {
                 text-align: center;
-                padding: 15px 15px;
-                background-color: rgb(212, 255, 255);
-            }
-        }
-        .formulario-contacto-buttons {
-            input {
-                background-color: rgb(127, 3, 243);
+                border: none;
+                background: none;
+                margin: 10px;
                 padding: 10px;
-                border-radius: 15px;
-                text-transform: uppercase;
-                font-size: 0.9rem;
+                border-bottom: 1px solid white;
                 color: white;
-                margin: 15px 5px;
-                &:hover {
-                    color: $hover;
-                }
-            }  
-        }
-        .section-contactanos {
-            grid-area: section-contactanos;
-            .contactanos {
-                color: white;
-                padding: 25px 0px;
-                font-size: 2.1rem;
-            }
-            .text-contacto {
-                color: white;
-                text-align: center;
-                font-size: 1.2rem;
-                font-weight: bold;
-                padding: 5px;
             }
            } 
+           .formulario-contacto-buttons {
+                .input-contacto {
+                    display: flex;
+                    justify-content: center;
+                    input{
+                    text-align: center;
+                    background-color: rgb(127, 3, 243);
+                    padding: 10px;
+                    border-radius: 15px;
+                    text-transform: uppercase;
+                    font-size: 0.9rem;
+                    color: white;
+                    margin: 15px 5px;
+                    &:hover {
+                        color: $hover;
+                            }
+                    }   
+                }  
+            }
+        }
    }
+   .section-contactanos {
+    grid-area: section-contactanos;
+    .contactanos {
+        text-align: center;
+        color: white;
+        padding: 25px 0px;
+        font-size: 2.1rem;
+    }
+    .text-contacto {
+        color: white;
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: bold;
+        padding: 5px;
+    }
+    }
    
    footer {
        grid-area: footer;

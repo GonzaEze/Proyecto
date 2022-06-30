@@ -1,0 +1,61 @@
+display: flex;
+       justify-content: space-around;
+       grid-area: main;
+       height: auto;
+       text-align: center;
+       .formulario-contacto,textarea{
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+    }   
+        legend {
+        border-radius: 9px;
+        background-color: black;
+        font-size: 2rem;
+        padding: 15px 15px;
+        color: white;
+    }
+        .formulario-contacto-style {
+            background-color: white;
+            border-radius: 9px;
+            border: 2px solid black;
+            label {
+                display: flex;
+                flex-direction: column;
+                margin: 15px;
+                font-size: 1.5rem;
+            }
+            input, textarea {
+                text-align: center;
+                padding: 15px 15px;
+                background-color: rgb(212, 255, 255);
+            }
+        }
+        .formulario-contacto-buttons {
+            input {
+                background-color: rgb(127, 3, 243);
+                padding: 10px;
+                border-radius: 15px;
+                text-transform: uppercase;
+                font-size: 0.9rem;
+                color: white;
+                margin: 15px 5px;
+                &:hover {
+                    color: $hover;
+                }
+            }  
+        }
+        .section-contactanos {
+            grid-area: section-contactanos;
+            .contactanos {
+                color: white;
+                padding: 25px 0px;
+                font-size: 2.1rem;
+            }
+            .text-contacto {
+                color: white;
+                text-align: center;
+                font-size: 1.2rem;
+                font-weight: bold;
+                padding: 5px;
+            }
+           } 

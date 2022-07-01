@@ -227,8 +227,8 @@
 
 @mixin footer {
     font-family: 'Roboto', sans-serif;
-    height: 125px;
-    padding: 5px;
+    height: auto;
+    padding: 10px;
     background-color: rgb(54, 53, 53);
     text-align: center;
     grid-area: footer;

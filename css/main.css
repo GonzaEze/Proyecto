@@ -143,8 +143,8 @@ main form {
 
 footer {
   font-family: 'Roboto', sans-serif;
-  height: 125px;
-  padding: 5px;
+  height: auto;
+  padding: 10px;
   background-color: #363535;
   text-align: center;
   grid-area: footer;
@@ -202,8 +202,7 @@ footer {
     .section-extra form {
       padding-bottom: 15px; }
   footer {
-    grid-area: footer;
-    height: auto; } }
+    grid-area: footer; } }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .contedor-grid {
@@ -330,8 +329,8 @@ header {
 footer {
   grid-area: footer;
   font-family: 'Roboto', sans-serif;
-  height: 125px;
-  padding: 5px;
+  height: auto;
+  padding: 10px;
   background-color: #363535;
   text-align: center;
   grid-area: footer;
@@ -367,8 +366,8 @@ footer {
   footer {
     grid-area: footer;
     font-family: 'Roboto', sans-serif;
-    height: 125px;
-    padding: 5px;
+    height: auto;
+    padding: 10px;
     background-color: #363535;
     text-align: center;
     grid-area: footer;
@@ -403,8 +402,8 @@ footer {
   footer {
     grid-area: footer;
     font-family: 'Roboto', sans-serif;
-    height: 125px;
-    padding: 5px;
+    height: auto;
+    padding: 10px;
     background-color: #363535;
     text-align: center;
     grid-area: footer;
@@ -478,8 +477,8 @@ header {
 
 footer {
   font-family: 'Roboto', sans-serif;
-  height: 125px;
-  padding: 5px;
+  height: auto;
+  padding: 10px;
   background-color: #363535;
   text-align: center;
   grid-area: footer;
@@ -522,8 +521,8 @@ footer {
     font-family: 'Libre Franklin', sans-serif; }
   footer {
     font-family: 'Roboto', sans-serif;
-    height: 125px;
-    padding: 5px;
+    height: auto;
+    padding: 10px;
     background-color: #363535;
     text-align: center;
     grid-area: footer;
@@ -567,8 +566,8 @@ footer {
     font-family: 'Libre Franklin', sans-serif; }
   footer {
     font-family: 'Roboto', sans-serif;
-    height: 125px;
-    padding: 5px;
+    height: auto;
+    padding: 10px;
     background-color: #363535;
     text-align: center;
     grid-area: footer;
@@ -611,8 +610,8 @@ header {
 
 footer {
   font-family: 'Roboto', sans-serif;
-  height: 125px;
-  padding: 5px;
+  height: auto;
+  padding: 10px;
   background-color: #363535;
   text-align: center;
   grid-area: footer;
@@ -714,8 +713,8 @@ header {
 footer {
   grid-area: footer;
   font-family: 'Roboto', sans-serif;
-  height: 125px;
-  padding: 5px;
+  height: auto;
+  padding: 10px;
   background-color: #363535;
   text-align: center;
   grid-area: footer;
@@ -763,8 +762,8 @@ footer {
   footer {
     grid-area: footer;
     font-family: 'Roboto', sans-serif;
-    height: 125px;
-    padding: 5px;
+    height: auto;
+    padding: 10px;
     background-color: #363535;
     text-align: center;
     grid-area: footer;
@@ -816,8 +815,8 @@ footer {
   footer {
     grid-area: footer;
     font-family: 'Roboto', sans-serif;
-    height: 125px;
-    padding: 5px;
+    height: auto;
+    padding: 10px;
     background-color: #363535;
     text-align: center;
     grid-area: footer;

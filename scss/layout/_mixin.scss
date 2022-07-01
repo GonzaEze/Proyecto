@@ -168,7 +168,7 @@
         background-size: cover;
         background-position: center;
         grid-area: main;
-        height: auto;
+        
 }
 @mixin h2-sobre-nosotros {
     color: $white;
@@ -210,7 +210,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-       height: 700px;
+       height: 800px;
        grid-area: main;
        text-align: center;
 }

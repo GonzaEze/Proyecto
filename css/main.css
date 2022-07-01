@@ -204,7 +204,7 @@ footer {
   footer {
     grid-area: footer; } }
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+@media screen and (min-width: 769px) and (max-width: 990px) {
   .contedor-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -276,8 +276,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  grid-area: main;
-  height: auto; }
+  grid-area: main; }
   .main-sobre-nosotros .h2-sobre-nosotros {
     color: white;
     font-style: italic;
@@ -338,13 +337,19 @@ footer {
   display: relative; }
 
 /*media query Mobile Sobre Nosotros*/
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 320px) and (max-width: 768px) {
   .contenedor-grid-sobrenosotros {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, auto);
     grid-template-areas: "header" "main" "contenedor-imagenes" "footer"; }
+  body .contenedor {
+    display: flex;
+    flex-direction: column;
+    text-align: center; }
   header {
+    height: 200px;
+    background-color: black;
     grid-area: header; }
   .main-sobre-nosotros {
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(../img/fondo-sobre-nosotros.png);
@@ -356,12 +361,17 @@ footer {
     .main-sobre-nosotros .p1, .main-sobre-nosotros .p2, .main-sobre-nosotros .p3 {
       color: white;
       text-align: center;
-      padding: 5px 50px;
+      padding: 10px 40px;
       font-family: 'Libre Franklin', sans-serif;
       font-size: 1.1rem; }
     .main-sobre-nosotros .img-sobrenosotros {
-      display: none; }
+      flex-direction: column;
+      align-items: center; }
+      .main-sobre-nosotros .img-sobrenosotros img {
+        width: 70%;
+        height: 70%; }
   .contenedor-imagenes {
+    grid-area: contenedor-imagenes;
     display: none; }
   footer {
     grid-area: footer;
@@ -374,7 +384,7 @@ footer {
     color: white;
     display: relative; } }
 
-@media screen and (min-width: 600px) and (max-width: 1200px) {
+@media screen and (min-width: 769px) and (max-width: 990px) {
   .contenedor-grid-sobrenosotros {
     display: grid;
     grid-template-columns: 1fr;
@@ -399,6 +409,9 @@ footer {
       display: none; }
   .contenedor-imagenes {
     grid-area: contenedor-imagenes; }
+    .contenedor-imagenes .img-trabajadores .img-radius:hover {
+      transform: scale(1.2);
+      transition: 2s; }
   footer {
     grid-area: footer;
     font-family: 'Roboto', sans-serif;
@@ -590,7 +603,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 700px;
+  height: 800px;
   grid-area: main;
   text-align: center; }
   .contenedor-envios h1 {
@@ -601,7 +614,7 @@ header {
   .contenedor-envios p {
     color: white;
     font-size: 1.1rem;
-    padding: 0px 50px; }
+    padding: 10px 50px; }
   .contenedor-envios h2 {
     -webkit-text-stroke: 1px #ff59cd;
     font-weight: bold;
@@ -619,21 +632,27 @@ footer {
   display: relative;
   grid-area: footer; }
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 320px) and (max-width: 768px) {
   .contenedor-grid-envios {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, auto);
     grid-template-areas: "header" "main" "footer"; }
+  body .contenedor {
+    display: flex;
+    flex-direction: column;
+    text-align: center; }
   header {
+    height: 200px;
+    background-color: black;
     grid-area: header; }
   .contenedor-envios {
     grid-area: main;
-    height: 800px; }
+    height: auto; }
   footer {
     grid-area: footer; } }
 
-@media screen and (min-width: 600px) and (max-width: 1200px) {
+@media screen and (min-width: 769px) and (max-width: 990px) {
   .contenedor-grid-envios {
     display: grid;
     grid-template-columns: 1fr;
@@ -644,7 +663,7 @@ footer {
   .contenedor-envios {
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(../img/fondo-envios.png);
     grid-area: main;
-    height: 800px; }
+    height: auto; }
   footer {
     grid-area: footer; } }
 
@@ -721,13 +740,19 @@ footer {
   color: white;
   display: relative; }
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 320px) and (max-width: 768px) {
   .contenedor-grid-contacto {
     display: grid;
     grid-template-columns: 3fr;
     grid-template-rows: repeat(1, auto);
     grid-template-areas: "header" "main"  "footer"; }
+  body .contenedor {
+    display: flex;
+    flex-direction: column;
+    text-align: center; }
   header {
+    height: 200px;
+    background-color: black;
     grid-area: header; }
   .formulario-contacto-principal {
     display: flex;
@@ -741,7 +766,7 @@ footer {
       .formulario-contacto-principal .formulario-form .forms {
         display: flex;
         flex-direction: column;
-        width: 500px; }
+        width: 300px; }
         .formulario-contacto-principal .formulario-form .forms input, .formulario-contacto-principal .formulario-form .forms textarea {
           text-align: center;
           border: none;
@@ -757,68 +782,7 @@ footer {
       justify-content: center;
       padding: 25px 25px; }
       .formulario-contacto-principal .section-contactanos .mapa-contacto iframe {
-        width: 500px;
+        width: 80%;
         height: 500px; }
   footer {
-    grid-area: footer;
-    font-family: 'Roboto', sans-serif;
-    height: auto;
-    padding: 10px;
-    background-color: #363535;
-    text-align: center;
-    grid-area: footer;
-    color: white;
-    display: relative; } }
-
-@media screen and (min-width: 601px) and (max-width: 1200px) {
-  .contenedor-grid-contacto {
-    display: grid;
-    grid-template-columns: 3fr;
-    grid-template-rows: repeat(1, auto);
-    grid-template-areas: "header" "main"  "footer"; }
-  header {
-    grid-area: header; }
-  .formulario-contacto-principal {
-    display: flex;
-    flex-direction: column;
-    grid-area: main;
-    height: auto; }
-    .formulario-contacto-principal .formulario-form {
-      padding-top: 50px;
-      color: white;
-      text-align: center; }
-      .formulario-contacto-principal .formulario-form legend {
-        font-size: 2rem;
-        padding-bottom: 20px; }
-      .formulario-contacto-principal .formulario-form .forms {
-        display: flex;
-        flex-direction: column;
-        width: 700px; }
-        .formulario-contacto-principal .formulario-form .forms input, .formulario-contacto-principal .formulario-form .forms textarea {
-          font-size: 1.2rem;
-          text-align: center;
-          border: none;
-          background: none;
-          margin: 25px;
-          padding: 10px;
-          border-bottom: 2px solid white;
-          color: white; }
-      .formulario-contacto-principal .formulario-form .formulario-contacto-buttons {
-        padding-bottom: 100px; }
-    .formulario-contacto-principal .section-contactanos .mapa-contacto {
-      display: flex;
-      justify-content: center;
-      padding: 25px 25px; }
-      .formulario-contacto-principal .section-contactanos .mapa-contacto iframe {
-        width: 800px;
-        height: 600px; }
-  footer {
-    grid-area: footer;
-    font-family: 'Roboto', sans-serif;
-    height: auto;
-    padding: 10px;
-    background-color: #363535;
-    text-align: center;
-    grid-area: footer;
-    color: white;
-    display: relative; } }
+    grid-area: footer; } }

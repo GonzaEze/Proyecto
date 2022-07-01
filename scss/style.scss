@@ -63,7 +63,7 @@ main {
     }
 }
 .section-productos {
-    height: 780px;
+    height: 770px;
     grid-area: section-productos;
     background-color: $color;
     text-align: center;
@@ -75,7 +75,6 @@ main {
         text-transform: uppercase;
     }
 }
-
 .section-extra {
     @include section-extra;
     .h2-extra {
@@ -199,15 +198,9 @@ footer {
             .card-img-top{
                 border-radius: 10px;}
             }
-            .accordion-button {
-                width: 100px;
-                background-color: $color-dos;
-                margin-top: 5px;
-                padding: 8px 20px;
-                border-radius: 5px;
-            }
-            .accordion-body{
-                margin-top: 25px;
+            .accordion-body {
+                background-color: $color;
+                color: $white;
             }
             .card-title {
                 padding-top: 7px;

@@ -104,7 +104,7 @@ main form {
       color: #dec6f4; }
 
 .section-productos {
-  height: 780px;
+  height: 770px;
   grid-area: section-productos;
   background-color: black;
   text-align: center;
@@ -165,81 +165,42 @@ footer {
     height: 200px;
     background-color: black;
     grid-area: header; }
-  .nav-config a:hover {
-    color: #dec6f4; }
   .main-fondo-home {
     height: 560px;
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/home.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
     grid-area: main;
-    padding-top: 150px; }
+    padding-top: 200px; }
   main .main-eslogan {
     color: white;
     text-align: center;
     font-family: 'Lato', sans-serif;
     padding: 0 50px;
-    font-size: 2rem; }
-    main .main-eslogan form {
-      display: flex;
-      justify-content: center;
-      padding-top: 50px; }
-      main .main-eslogan form button {
-        background-color: blueviolet;
-        padding: 10px;
-        border-radius: 10px;
-        font-size: 1.5rem;
-        color: white;
-        font-family: 'Rubik', sans-serif; }
-        main .main-eslogan form button:hover {
-          color: #dec6f4; }
+    font-size: 1.5rem; }
   .section-sobrenosotros {
     height: 750px;
     grid-area: section-sobrenosotros;
-    padding-top: 80px; }
-    .section-sobrenosotros .p-sobrenosotros {
-      padding: 35px 50px; }
-    .section-sobrenosotros form {
-      padding-top: 5px; } }
+    padding: 25px 0px; }
+  .section-productos {
+    height: auto;
+    grid-area: section-productos; }
+    .section-productos .h2-productos {
+      padding: 15px 10px;
+      font-size: 1.5rem; }
+    .section-productos .contenedor-carrusel {
+      display: flex;
+      justify-content: center; }
+  .section-extra {
+    height: 550px;
+    grid-area: section-extra; }
+    .section-extra .section-extra-contenido {
+      color: white;
+      font-size: 1.4rem;
+      padding: 50px 30px;
+      font-family: 'Libre Franklin', sans-serif; } }
 
-.section-productos {
-  height: 450px;
-  grid-area: section-productos;
-  background-color: black;
-  text-align: center;
-  color: white; }
-  .section-productos .h2-productos {
-    padding: 20px;
-    font-family: 'Libre Franklin', sans-serif;
-    font-size: 2rem;
-    text-transform: uppercase; }
-
-.section-extra {
-  height: 500px;
-  grid-area: section-extra;
-  padding: 50px; }
-  .section-extra .h2-extra {
-    padding-top: 25px; }
-  .section-extra .section-extra-contenido {
-    font-size: 1.2rem;
-    padding: 15px 30px;
-    font-family: 'Libre Franklin', sans-serif; }
-  .section-extra form {
-    padding-top: 15px; }
-
-footer {
-  font-family: 'Roboto', sans-serif;
-  height: 125px;
-  padding: 5px;
-  background-color: #363535;
-  text-align: center;
-  grid-area: footer;
-  color: white;
-  display: relative; }
-
-/*media query Tablet Index*/
-@media screen and (min-width: 600px) and (max-width: 1200px) {
+@media screen and (max-width: 600px) and (min-width: 600px) and (max-width: 1200px) {
   .contedor-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -253,80 +214,37 @@ footer {
     height: 200px;
     background-color: black;
     grid-area: header; }
-  .nav-config a:hover {
-    color: #dec6f4; }
   .main-fondo-home {
-    height: 500px;
+    height: 560px;
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/home.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
     grid-area: main;
-    padding-top: 150px; }
+    padding-top: 200px; }
   main .main-eslogan {
     color: white;
     text-align: center;
     font-family: 'Lato', sans-serif;
     padding: 0 50px;
-    font-size: 2rem; }
-    main .main-eslogan form {
-      display: flex;
-      justify-content: center;
-      padding-top: 50px; }
-      main .main-eslogan form button {
-        background-color: blueviolet;
-        padding: 10px;
-        border-radius: 10px;
-        font-size: 1.5rem;
-        color: white;
-        font-family: 'Rubik', sans-serif; }
-        main .main-eslogan form button:hover {
-          color: #dec6f4; }
+    font-size: 1.5rem; }
   .section-sobrenosotros {
-    height: 600px;
+    height: 750px;
     grid-area: section-sobrenosotros;
-    padding-top: 80px; }
-    .section-sobrenosotros .h2-sobrenosotros {
-      margin-top: -20px; }
-    .section-sobrenosotros .p-sobrenosotros {
-      padding: 35px 50px; }
-    .section-sobrenosotros form {
-      padding-top: 5px; } }
-
-.section-productos {
-  height: 600px;
-  grid-area: section-productos;
-  background-color: black;
-  text-align: center;
-  color: white; }
-  .section-productos .h2-productos {
-    padding: 20px;
-    font-family: 'Libre Franklin', sans-serif;
-    font-size: 2rem;
-    text-transform: uppercase; }
-
-.section-extra {
-  height: 40px;
-  grid-area: section-extra;
-  padding: 50px; }
-  .section-extra .h2-extra {
-    padding-top: 25px; }
-  .section-extra .section-extra-contenido {
-    font-size: 1.2rem;
-    padding: 15px 30px;
-    font-family: 'Libre Franklin', sans-serif; }
-  .section-extra form {
-    padding-top: 15px; }
-
-footer {
-  font-family: 'Roboto', sans-serif;
-  height: 125px;
-  padding: 5px;
-  background-color: #363535;
-  text-align: center;
-  grid-area: footer;
-  color: white;
-  display: relative; }
+    padding: 25px 0px; }
+  .section-productos {
+    height: 520px;
+    grid-area: section-productos; }
+    .section-productos .h2-productos {
+      padding: 15px 10px;
+      font-size: 1.5rem; }
+  .section-extra {
+    height: 550px;
+    grid-area: section-extra; }
+    .section-extra .section-extra-contenido {
+      color: white;
+      font-size: 1.4rem;
+      padding: 50px 30px;
+      font-family: 'Libre Franklin', sans-serif; } }
 
 /* SOBRE NOSOTROS*/
 .contenedor-grid-sobrenosotros {
@@ -516,14 +434,9 @@ header {
         transform: translateY(-3%); }
       .main-productos .cartas-productos .bg-black .card-img-top {
         border-radius: 10px; }
-    .main-productos .cartas-productos .accordion-button {
-      width: 100px;
-      background-color: #5c1b48;
-      margin-top: 5px;
-      padding: 8px 20px;
-      border-radius: 5px; }
     .main-productos .cartas-productos .accordion-body {
-      margin-top: 25px; }
+      background-color: black;
+      color: white; }
     .main-productos .cartas-productos .card-title {
       padding-top: 7px; }
     .main-productos .cartas-productos .card-text {
@@ -695,47 +608,13 @@ footer {
   .contenedor-grid-envios {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, auto);
-    grid-template-areas: "header" "main" "section-envios" "footer"; }
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "header" "main" "footer"; }
   header {
     grid-area: header; }
-  main {
-    grid-area: main; }
   .contenedor-envios {
-    background-color: #dafff3;
-    height: auto; }
-    .contenedor-envios h1 {
-      font-family: 'Roboto', sans-serif;
-      font-size: 2rem;
-      text-align: center;
-      padding: 30px; }
-    .contenedor-envios .envios1 {
-      font-size: 1.3rem;
-      font-family: 'Libre Franklin', sans-serif;
-      text-align: justify;
-      padding: 20px 40px; }
-    .contenedor-envios .envios2 {
-      font-size: 1.3rem;
-      font-family: 'Libre Franklin', sans-serif;
-      text-align: justify;
-      padding: 20px 40px; }
-  .section-envios {
-    background-color: #dafff3;
-    display: flex;
-    flex-direction: column;
-    grid-area: section-envios; }
-    .section-envios .section1 {
-      font-size: 1.3rem;
-      font-family: 'Libre Franklin', sans-serif;
-      text-align: justify;
-      padding: 20px 40px; }
-    .section-envios .section2 {
-      font-size: 1.3rem;
-      font-family: 'Libre Franklin', sans-serif;
-      text-align: justify;
-      padding: 20px 40px; }
-    .section-envios img {
-      display: none; }
+    grid-area: main;
+    height: 800px; }
   footer {
     grid-area: footer; } }
 
@@ -743,47 +622,14 @@ footer {
   .contenedor-grid-envios {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, auto);
-    grid-template-areas: "header" "main" "section-envios" "footer"; }
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "header" "main" "footer"; }
   header {
     grid-area: header; }
-  main {
-    grid-area: main; }
   .contenedor-envios {
-    background-color: #dafff3;
-    height: auto; }
-    .contenedor-envios h1 {
-      font-family: 'Roboto', sans-serif;
-      font-size: 2rem;
-      text-align: center;
-      padding: 30px; }
-    .contenedor-envios .envios1 {
-      font-size: 1.3rem;
-      font-family: 'Libre Franklin', sans-serif;
-      text-align: justify;
-      padding: 20px 40px; }
-    .contenedor-envios .envios2 {
-      font-size: 1.3rem;
-      font-family: 'Libre Franklin', sans-serif;
-      text-align: justify;
-      padding: 20px 40px; }
-  .section-envios {
-    background-color: #dafff3;
-    display: flex;
-    flex-direction: column;
-    grid-area: section-envios; }
-    .section-envios .section1 {
-      font-size: 1.3rem;
-      font-family: 'Libre Franklin', sans-serif;
-      text-align: justify;
-      padding: 20px 40px; }
-    .section-envios .section2 {
-      font-size: 1.3rem;
-      font-family: 'Libre Franklin', sans-serif;
-      text-align: justify;
-      padding: 20px 40px; }
-    .section-envios img {
-      display: none; }
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(../img/fondo-envios.png);
+    grid-area: main;
+    height: 800px; }
   footer {
     grid-area: footer; } }
 

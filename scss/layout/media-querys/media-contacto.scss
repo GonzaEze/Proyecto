@@ -42,6 +42,11 @@
                 display: flex;
                 justify-content: center;
                 padding: 25px 25px;
+                iframe {
+                    width: 500px ;
+                    height: 500px;
+                }
+
             } 
         }
     }
@@ -52,7 +57,7 @@
 }
 
 
-@media screen and (min-width: 600px) and (max-width: 1200px){
+@media screen and (min-width: 601px) and (max-width: 1200px){
     .contenedor-grid-contacto {
         display: grid;
         grid-template-columns: 3fr;

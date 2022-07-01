@@ -1,6 +1,6 @@
 /*media query Mobile Index*/
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 320px) and (max-width: 768px) {
 
     .contedor-grid {
         display: grid;
@@ -46,9 +46,14 @@ main {
     }
 }
 .section-sobrenosotros {
-    height: 750px;
+    height: auto;
     grid-area: section-sobrenosotros;
     padding: 25px 0px;
+    form {
+        button{
+            
+        }
+    }
 }
 
 .section-productos {
@@ -59,13 +64,15 @@ main {
         font-size: 1.5rem;
     }
     .contenedor-carrusel {
-        display: flex;
-        justify-content: center;
-    }
+        .carousel-item{
+            .tamaño-carrusel{
+            width: 80%;
+            }
+        }
+    }  
 }
 .section-extra {
-    
-    height: 550px;
+    height: auto;
     grid-area: section-extra;
     .section-extra-contenido {
         color: $white;
@@ -73,9 +80,19 @@ main {
         padding: 50px 30px;
         font-family: 'Libre Franklin', sans-serif;
     }
+    form {
+        padding-bottom: 15px;
+    }
 }
 
-@media screen and (min-width:600px) and (max-width: 1200px) {
+footer {
+    grid-area: footer;
+    @include footer;
+    }
+}
+
+
+@media screen and (min-width:769px) and (max-width: 1024px) {
     .contedor-grid {
         display: grid;
         grid-template-columns: 1fr;
@@ -100,7 +117,7 @@ main {
         grid-area: header; }
 
 .main-fondo-home {
-    height: 560px;
+    height: 500px;
     background-image: linear-gradient(
     0deg,
     rgba(0,0,0,0.7),
@@ -119,54 +136,54 @@ main {
         font-size: 1.5rem;
     }
 }
+
 .section-sobrenosotros {
-    height: 750px;
+    height: auto;
     grid-area: section-sobrenosotros;
     padding: 25px 0px;
+    form {
+        button{
+            
+        }
+    }
 }
 
 .section-productos {
-    height: 520px;
+    height: auto;
+    grid-area: section-productos;
+    .h2-productos {
+        padding: 15px 10px;
+        font-size: 1.5rem;
+    }
+    .contenedor-carrusel {
+        .carousel-item{
+            .tamaño-carrusel{
+            width: 80%;
+            }
+        }
+    }  
+}
+
+.section-productos {
+    height: auto;
     grid-area: section-productos;
     .h2-productos {
         padding: 15px 10px;
         font-size: 1.5rem;
     }
 }
-.section-extra {
-    
-    height: 550px;
+.section-extra { 
+    height: auto;
     grid-area: section-extra;
-    .section-extra-contenido {
-        color: $white;
-        font-size: 1.4rem;
-        padding: 50px 30px;
-        font-family: 'Libre Franklin', sans-serif;
+        .section-extra-contenido {
+            color: $white;
+            font-size: 1.4rem;
+            padding: 50px 30px;
+            font-family: 'Libre Franklin', sans-serif;
+        }
     }
 }
-}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
 
    
    

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -151,7 +152,7 @@ footer {
   display: relative; }
 
 /*media query Mobile Index*/
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 320px) and (max-width: 768px) {
   .contedor-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -179,7 +180,7 @@ footer {
     padding: 0 50px;
     font-size: 1.5rem; }
   .section-sobrenosotros {
-    height: 750px;
+    height: auto;
     grid-area: section-sobrenosotros;
     padding: 25px 0px; }
   .section-productos {
@@ -188,19 +189,30 @@ footer {
     .section-productos .h2-productos {
       padding: 15px 10px;
       font-size: 1.5rem; }
-    .section-productos .contenedor-carrusel {
-      display: flex;
-      justify-content: center; }
+    .section-productos .contenedor-carrusel .carousel-item .tamaño-carrusel {
+      width: 80%; }
   .section-extra {
-    height: 550px;
+    height: auto;
     grid-area: section-extra; }
     .section-extra .section-extra-contenido {
       color: white;
       font-size: 1.4rem;
       padding: 50px 30px;
-      font-family: 'Libre Franklin', sans-serif; } }
+      font-family: 'Libre Franklin', sans-serif; }
+    .section-extra form {
+      padding-bottom: 15px; }
+  footer {
+    grid-area: footer;
+    font-family: 'Roboto', sans-serif;
+    height: 125px;
+    padding: 5px;
+    background-color: #363535;
+    text-align: center;
+    grid-area: footer;
+    color: white;
+    display: relative; } }
 
-@media screen and (max-width: 600px) and (min-width: 600px) and (max-width: 1200px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
   .contedor-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -215,7 +227,7 @@ footer {
     background-color: black;
     grid-area: header; }
   .main-fondo-home {
-    height: 560px;
+    height: 500px;
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/home.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -228,17 +240,25 @@ footer {
     padding: 0 50px;
     font-size: 1.5rem; }
   .section-sobrenosotros {
-    height: 750px;
+    height: auto;
     grid-area: section-sobrenosotros;
     padding: 25px 0px; }
   .section-productos {
-    height: 520px;
+    height: auto;
+    grid-area: section-productos; }
+    .section-productos .h2-productos {
+      padding: 15px 10px;
+      font-size: 1.5rem; }
+    .section-productos .contenedor-carrusel .carousel-item .tamaño-carrusel {
+      width: 80%; }
+  .section-productos {
+    height: auto;
     grid-area: section-productos; }
     .section-productos .h2-productos {
       padding: 15px 10px;
       font-size: 1.5rem; }
   .section-extra {
-    height: 550px;
+    height: auto;
     grid-area: section-extra; }
     .section-extra .section-extra-contenido {
       color: white;
@@ -741,6 +761,9 @@ footer {
       display: flex;
       justify-content: center;
       padding: 25px 25px; }
+      .formulario-contacto-principal .section-contactanos .mapa-contacto iframe {
+        width: 500px;
+        height: 500px; }
   footer {
     grid-area: footer;
     font-family: 'Roboto', sans-serif;
@@ -752,7 +775,7 @@ footer {
     color: white;
     display: relative; } }
 
-@media screen and (min-width: 600px) and (max-width: 1200px) {
+@media screen and (min-width: 601px) and (max-width: 1200px) {
   .contenedor-grid-contacto {
     display: grid;
     grid-template-columns: 3fr;

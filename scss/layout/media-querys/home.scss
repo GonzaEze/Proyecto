@@ -87,7 +87,7 @@ main {
 
 footer {
     grid-area: footer;
-    @include footer;
+    height: auto;
     }
 }
 
@@ -182,10 +182,12 @@ main {
             font-family: 'Libre Franklin', sans-serif;
         }
     }
+
+footer {
+    grid-area: footer;
+    height: auto;
+    }
 }
-
-
-   
    
 
 

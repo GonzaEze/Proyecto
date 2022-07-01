@@ -203,14 +203,7 @@ footer {
       padding-bottom: 15px; }
   footer {
     grid-area: footer;
-    font-family: 'Roboto', sans-serif;
-    height: 125px;
-    padding: 5px;
-    background-color: #363535;
-    text-align: center;
-    grid-area: footer;
-    color: white;
-    display: relative; } }
+    height: auto; } }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .contedor-grid {
@@ -264,7 +257,10 @@ footer {
       color: white;
       font-size: 1.4rem;
       padding: 50px 30px;
-      font-family: 'Libre Franklin', sans-serif; } }
+      font-family: 'Libre Franklin', sans-serif; }
+  footer {
+    grid-area: footer;
+    height: auto; } }
 
 /* SOBRE NOSOTROS*/
 .contenedor-grid-sobrenosotros {

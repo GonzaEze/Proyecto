@@ -84,7 +84,7 @@ main form {
   background-size: cover;
   background-position: center;
   grid-area: section-sobrenosotros;
-  padding-top: 80px; }
+  padding-top: 60px; }
   .section-sobrenosotros .h2-sobrenosotros {
     color: white;
     font-style: italic;
@@ -137,7 +137,7 @@ main form {
     padding: 50px 30px;
     font-family: 'Libre Franklin', sans-serif; }
   .section-extra form {
-    padding-top: 25px; }
+    padding: 25px 0; }
     .section-extra form button:hover {
       color: #dec6f4; }
 
@@ -204,18 +204,14 @@ footer {
   footer {
     grid-area: footer; } }
 
-@media screen and (min-width: 769px) and (max-width: 990px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
   .contedor-grid {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, auto);
     grid-template-areas: "header" "main" "section-sobrenosotros" "section-productos" "section.extra" "footer"; }
-  body .contenedor {
-    display: flex;
-    flex-direction: column;
-    text-align: center; }
   header {
-    height: 200px;
+    height: 150px;
     background-color: black;
     grid-area: header; }
   .main-fondo-home {
@@ -384,13 +380,14 @@ footer {
     color: white;
     display: relative; } }
 
-@media screen and (min-width: 769px) and (max-width: 990px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
   .contenedor-grid-sobrenosotros {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, auto);
     grid-template-areas: "header" "main" "contenedor-imagenes" "footer"; }
   header {
+    height: 150px;
     grid-area: header; }
   .main-sobre-nosotros {
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(../img/fondo-sobre-nosotros.png);
@@ -543,14 +540,15 @@ footer {
     display: relative;
     grid-area: footer; } }
 
-@media screen and (min-width: 600px) and (max-width: 1200px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
   .contenedor-productos {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, auto);
     grid-template-areas: "header" "main" "footer"; }
   header {
-    grid-area: header; }
+    grid-area: header;
+    height: 150px; }
   main {
     height: auto;
     grid-area: main; }
@@ -667,14 +665,15 @@ footer {
   footer {
     grid-area: footer; } }
 
-@media screen and (min-width: 769px) and (max-width: 990px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
   .contenedor-grid-envios {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, auto);
     grid-template-areas: "header" "main" "footer"; }
   header {
-    grid-area: header; }
+    grid-area: header;
+    height: 150px; }
   .contenedor-envios {
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(../img/fondo-envios.png);
     grid-area: main;
@@ -802,14 +801,15 @@ footer {
   footer {
     grid-area: footer; } }
 
-@media screen and (min-width: 769px) and (max-width: 990px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
   .contenedor-grid-contacto {
     display: grid;
     grid-template-columns: 3fr;
     grid-template-rows: repeat(1, auto);
     grid-template-areas: "header" "main"  "footer"; }
   header {
-    grid-area: header; }
+    grid-area: header;
+    height: 150px; }
   .formulario-contacto-principal {
     display: flex;
     flex-direction: column;

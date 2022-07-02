@@ -87,7 +87,7 @@ main {
         font-family: 'Libre Franklin', sans-serif;
     }
     form {
-        padding-top: 25px;
+        padding: 25px 0;
         button {
             @extend %botones;
             &:hover {

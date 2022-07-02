@@ -60,7 +60,7 @@
 }
 
 
-@media screen and (min-width:769px) and (max-width: 990px) {
+@media screen and (min-width:769px) and (max-width: 1024px) {
 
     .contenedor-grid-envios {
         display: grid;
@@ -73,6 +73,7 @@
  
     header {
         grid-area: header;
+        height: 150px;
     }
 
     .contenedor-envios {

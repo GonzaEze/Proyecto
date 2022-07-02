@@ -46,7 +46,7 @@
     }
 }
 
-@media screen and (min-width: 600px) and (max-width: 1200px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
     .contenedor-productos{
         display: grid;
         grid-template-columns: 1fr;
@@ -57,6 +57,7 @@
     }
     header{
         grid-area: header;
+        height: 150px;
     }
     main {
         height: auto;

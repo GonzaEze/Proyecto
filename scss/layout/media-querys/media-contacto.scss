@@ -65,7 +65,7 @@
 }
 
 
-@media screen and (min-width:769px) and (max-width: 990px){
+@media screen and (min-width:769px) and (max-width: 1024px){
     .contenedor-grid-contacto {
         display: grid;
         grid-template-columns: 3fr;
@@ -78,6 +78,7 @@
 
         header {
             grid-area: header;
+            height: 150px;
         }
         .formulario-contacto-principal {
             display: flex;

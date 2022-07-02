@@ -190,7 +190,6 @@ footer {
         justify-content: center;
         .bg-black {
             border-radius: 20px;
-            height: auto;
             text-align: center;
             &:hover{
                 box-shadow:  5px 5px 20px rgba(255, 91, 206, 0.5);
@@ -230,6 +229,32 @@ footer {
         text-align: center;
         padding-top: 5px ; 
        } 
+    }
+    .cartas-productos-dos {
+        padding-top: 30px;
+        display: flex;
+        justify-content: center;
+        .bg-black {
+            border-radius: 20px;
+            height: auto;
+            text-align: center;
+            &:hover{
+                box-shadow:  5px 5px 20px rgba(255, 91, 206, 0.5);
+                transform: translateY(-3%);}
+            .card-img-top{
+                border-radius: 10px;}
+            }
+            .accordion-body {
+                background-color: $color;
+                color: $white;
+            }
+            .card-title {
+                padding-top: 7px;
+            }
+            .card-text {
+                padding-top: 10px;
+                text-align: center;
+            }
     }
    footer {
        @include footer;
@@ -292,15 +317,15 @@ footer {
             display: flex;
             flex-direction: column;
             width: 30vw;
-            input, textarea {
-                text-align: center;
-                border: none;
-                background: none;
-                margin: 10px;
-                padding: 10px;
-                border-bottom: 1px solid $white;
-                color: $white;
-            }
+                input, textarea {
+                    text-align: center;
+                    border: none;
+                    background: none;
+                    margin: 10px;
+                    padding: 10px;
+                    border-bottom: 1px solid $white;
+                    color: $white;
+                }
            } 
            .formulario-contacto-buttons {
                 .input-contacto {
@@ -330,7 +355,7 @@ footer {
         font-weight: bold;
         padding: 5px;
     }
-    }
+}
    
    footer {
        grid-area: footer;

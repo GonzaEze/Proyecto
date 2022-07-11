@@ -1,165 +1,128 @@
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 320px) and (max-width: 768px) {
     .contenedor-grid-contacto {
     display: grid;
-    grid-template-columns: 4fr;
+    grid-template-columns: 3fr;
     grid-template-rows: repeat(1, auto);
     grid-template-areas: "header"
                           "main" 
-                          "section-contactanos"
                           "footer";
     }
+    body .contenedor {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
     header {
+        height: 200px;
+        background-color: rgb(0, 0, 0);
         grid-area: header;
     }
     .formulario-contacto-principal {
+        display: flex;
+        flex-direction: column;
         grid-area: main;
-        background-color: antiquewhite;
         height: auto;
-        .formulario-contacto,textarea {
-         text-align: center;
-         font-family: 'Roboto', sans-serif;
-     }   
-         legend {
-         border-radius: 9px;
-         background-color: black;
-         font-size: 2rem;
-         padding: 15px 15px;
-         color: white;
-     }
-         .formulario-contacto-style {
-             border-radius: 9px;
-             border: 2px solid black;
-             label {
-                 display: flex;
-                 flex-direction: column;
-                 margin: 15px;
-                 font-size: 1.5rem;
-             }
-             input, textarea {
-                 text-align: center;
-                 padding: 15px 15px;
-                 background-color: rgb(212, 255, 255);
-             }
-         }
-         .formulario-contacto-buttons {
-             input {
-                 background-color: rgb(127, 3, 243);
-                 padding: 10px;
-                 border-radius: 15px;
-                 text-transform: uppercase;
-                 font-size: 0.9rem;
-                 color: white;
-                 margin: 15px 5px;
-                 &:hover {
-                     color: $hover;
-                 }
-             } 
-         }
-    }
-    .section-contactanos {
-     grid-area: section-contactanos;
-     width: auto;
-     background-color: antiquewhite;
-         .contactanos {
-             text-align: center;
-             padding: 25px;
-         }
-         .mapa-contacto {
-             
-             display: flex;
-             justify-content: center;
-         }
-         .text-contacto {
-             text-align: center;
-             font-size: 1.2rem;
-             font-weight: bold;
-             padding: 5px;
-         }
+        .formulario-form{
+           padding-top: 50px;
+           color: $white;
+           text-align: center; 
+            .forms{
+                display: flex;
+            flex-direction: column;
+            width: 300px;
+                input, textarea {
+                text-align: center;
+                border: none;
+                background: none;
+                margin: 10px;
+                padding: 10px;
+                border-bottom: 1px solid $white;
+                color: $white;
+                }  
+            }
+            .formulario-contacto-buttons{
+                padding-bottom: 100px;
+            }
+        }
+        .section-contactanos{
+            .mapa-contacto{
+                display: flex;
+                justify-content: center;
+                padding: 25px 25px;
+                iframe {
+                    width: 80%;
+                    height: 500px;
+                }
+
+            } 
+        }
     }
     footer {
         grid-area: footer;
-        @include footer;
+       
     }
 }
 
 
-@media screen and (min-width: 600px) and (max-width: 1200px){
+@media screen and (min-width:769px) and (max-width: 1024px){
     .contenedor-grid-contacto {
         display: grid;
-        grid-template-columns: 4fr;
+        grid-template-columns: 3fr;
         grid-template-rows: repeat(1, auto);
         grid-template-areas: "header"
                               "main" 
-                              "section-contactanos"
                               "footer";
         }
+
+
         header {
             grid-area: header;
+            height: 150px;
         }
         .formulario-contacto-principal {
+            display: flex;
+            flex-direction: column;
             grid-area: main;
-            background-color: antiquewhite;
             height: auto;
-            .formulario-contacto,textarea {
-             text-align: center;
-             font-family: 'Roboto', sans-serif;
-         }   
-             legend {
-             border-radius: 9px;
-             background-color: black;
-             font-size: 2rem;
-             padding: 15px 15px;
-             color: white;
-         }
-             .formulario-contacto-style {
-                 border-radius: 9px;
-                 border: 2px solid black;
-                 label {
-                     display: flex;
-                     flex-direction: column;
-                     margin: 15px;
-                     font-size: 1.5rem;
-                 }
-                 input, textarea {
-                     text-align: center;
-                     padding: 15px 15px;
-                     background-color: rgb(212, 255, 255);
-                 }
-             }
-             .formulario-contacto-buttons {
-                 input {
-                     background-color: rgb(127, 3, 243);
-                     padding: 10px;
-                     border-radius: 15px;
-                     text-transform: uppercase;
-                     font-size: 0.9rem;
-                     color: white;
-                     margin: 15px 5px;
-                     &:hover {
-                         color: $hover;
-                     }
-                 } 
-             }
-        }
-        .section-contactanos {
-         grid-area: section-contactanos;
-         width: auto;
-         background-color: antiquewhite;
-             .contactanos {
-                 text-align: center;
-                 padding: 25px;
-             }
-             .mapa-contacto {
-                 
-                 display: flex;
-                 justify-content: center;
-             }
-             .text-contacto {
-                 text-align: center;
-                 font-size: 1.2rem;
-                 font-weight: bold;
-                 padding: 5px;
-             }
+            .formulario-form{
+               padding-top: 50px;
+               color: $white;
+               text-align: center; 
+               legend {
+                font-size: 2rem;
+                padding-bottom: 20px;
+               }
+                .forms{
+                display: flex;
+                flex-direction: column;
+                width: 600px;
+                    input, textarea {
+                    font-size: 1.2rem;
+                    text-align: center;
+                    border: none;
+                    background: none;
+                    margin: 25px;
+                    padding: 10px;
+                    border-bottom: 2px solid $white;
+                    color: $white;
+                    }  
+                }
+                .formulario-contacto-buttons{
+                    padding-bottom: 100px;
+                }
+            }
+            .section-contactanos{
+                .mapa-contacto{
+                    display: flex;
+                    justify-content: center;
+                    padding: 25px 25px;
+                    iframe {
+                        width: 80%;
+                        height: 500px;
+                    }
+                } 
+            }
         }
         footer {
             grid-area: footer;

@@ -1,135 +1,62 @@
-@media screen and (max-width:600px) {
+@media screen and (min-width: 320px) and (max-width: 768px) {
 
     .contenedor-grid-envios {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, auto);
+        grid-template-rows: repeat(3, auto);
         grid-template-areas: "header"
                              "main"
-                             "section-envios"
                              "footer";
     }
 
+    body .contenedor {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
     header {
+        height: 200px;
+        background-color: rgb(0, 0, 0);
         grid-area: header;
     }
 
-    main {
-        grid-area: main;
-    }
-
     .contenedor-envios {
-        background-color: rgb(218, 255, 243);
+        grid-area: main;
         height: auto;
-        h1 {
-            font-family: 'Roboto', sans-serif;
-            font-size: 2rem;
-            text-align: center;
-            padding: 30px;
-        }
-        .envios1 {
-            font-size: 1.3rem;
-            font-family: 'Libre Franklin', sans-serif;
-            text-align: justify;
-            padding: 20px 40px;
-        }
-        .envios2 {
-            font-size: 1.3rem;
-            font-family: 'Libre Franklin', sans-serif;
-            text-align: justify;
-            padding: 20px 40px;
-        }
     }
-  .section-envios {
-        background-color: rgb(218, 255, 243);
-        display: flex;
-        flex-direction: column;
-        grid-area: section-envios;
-        .section1 {
-            font-size: 1.3rem;
-            font-family: 'Libre Franklin', sans-serif;
-            text-align: justify;
-            padding: 20px 40px;
-        }
-        .section2 {
-            font-size: 1.3rem;
-            font-family: 'Libre Franklin', sans-serif;
-            text-align: justify;
-            padding: 20px 40px;
-        }
-        img {
-            display: none;
-        }
-    }
+ 
     footer {
         grid-area: footer;
     }
 }
-    @media screen and (min-width:600px) and (max-width: 1200px) {
 
-        .contenedor-grid-envios {
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: repeat(4, auto);
-            grid-template-areas: "header"
-                                 "main"
-                                 "section-envios"
-                                 "footer";
-        }
-    
-        header {
-            grid-area: header;
-        }
-    
-        main {
-            grid-area: main;
-        }
-    
-        .contenedor-envios {
-            background-color: rgb(218, 255, 243);
-            height: auto;
-            h1 {
-                font-family: 'Roboto', sans-serif;
-                font-size: 2rem;
-                text-align: center;
-                padding: 30px;
-            }
-            .envios1 {
-                font-size: 1.3rem;
-                font-family: 'Libre Franklin', sans-serif;
-                text-align: justify;
-                padding: 20px 40px;
-            }
-            .envios2 {
-                font-size: 1.3rem;
-                font-family: 'Libre Franklin', sans-serif;
-                text-align: justify;
-                padding: 20px 40px;
-            }
-        }
-      .section-envios {
-            background-color: rgb(218, 255, 243);
-            display: flex;
-            flex-direction: column;
-            grid-area: section-envios;
-            .section1 {
-                font-size: 1.3rem;
-                font-family: 'Libre Franklin', sans-serif;
-                text-align: justify;
-                padding: 20px 40px;
-            }
-            .section2 {
-                font-size: 1.3rem;
-                font-family: 'Libre Franklin', sans-serif;
-                text-align: justify;
-                padding: 20px 40px;
-            }
-            img {
-                display: none;
-            }
-        }
-        footer {
-            grid-area: footer;
-        }
-    
+@media screen and (min-width:769px) and (max-width: 1024px) {
+
+    .contenedor-grid-envios {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: "header"
+                             "main"
+                             "footer";
     }
+ 
+    header {
+        grid-area: header;
+        height: 150px;
+    }
+
+    .contenedor-envios {
+        background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.9) ), url(../img/fondo-envios.png);
+        grid-area: main;
+        height: 800px;
+    }
+ 
+    footer {
+        grid-area: footer;
+    }
+}

@@ -31,15 +31,10 @@ header {
 }
 main {
     .main-eslogan {
-        color: white;
-        text-align: center;
-        font-family: 'Lato', sans-serif;
-        padding: 10px;
-        font-size: 2rem;}
+        @include main-eslogan;
+       }
         form {
-            display: flex;
-            justify-content: center;
-            padding-top: 50px;
+            @include form;
             button {
                 @extend %botones;
                 &:hover {
@@ -48,22 +43,13 @@ main {
             }
         }
 }
-.section-sobrenosotros {   
-    height: 600px;
-    grid-area: section-sobrenosotros;
-    padding-top: 80px;
+.section-sobrenosotros { 
+    @include section-sobre-nosotros;
     .h2-sobrenosotros {
-        text-align: center;
-        font-family: 'Roboto', sans-serif;
-        font-size: 2.5rem;
-        font-style: italic;
+        @include h2-sobre-nosotros;
     }
     .p-sobrenosotros {
-        padding: 60px 60px;
-        font-family: 'Libre Franklin', sans-serif;
-        font-weight: bold;
-        font-size: 1.4rem;
-        text-align: center;
+        @include p-sobre-nosotros;
     }
     form {
         padding-top: 5px;
@@ -77,37 +63,31 @@ main {
     }
 }
 .section-productos {
-    height: 1000px;
+    height: 770px;
     grid-area: section-productos;
-    background-color: rgb(26, 26, 26);
+    background-color: $color;
     text-align: center;
-    color: white;
+    color: $white;
     .h2-productos {
-        padding: 10px;
+        padding: 15px;
         font-family: 'Libre Franklin', sans-serif;
         font-size: 2.4rem;
         text-transform: uppercase;
     }
 }
 .section-extra {
-    height: 550px;
-    background-color: rgb(248, 236, 222);
-    grid-area: section-extra;
-    padding: 15px;
-    text-align: center;
+    @include section-extra;
     .h2-extra {
-        font-family: 'Roboto', sans-serif;
-        padding-top: 50px;
-        font-size:  2.5rem;
-        text-transform: uppercase;
+        @include h2-extra;
     }
     .section-extra-contenido {
-        font-size: 1.5rem;
+        color: $white;
+        font-size: 1.4rem;
         padding: 50px 30px;
         font-family: 'Libre Franklin', sans-serif;
     }
     form {
-        padding-top: 25px;
+        padding: 25px 0;
         button {
             @extend %botones;
             &:hover {
@@ -130,44 +110,59 @@ header {
     grid-area: header; 
 }
 .main-sobre-nosotros{
-    grid-area: main;
-    height: auto;
+    @include main-sobre-nosotros;
         .h2-sobre-nosotros {
-            font-style: italic;
-            text-align: center;
-            font-family: 'Roboto', sans-serif;
-            font-size: 2rem;
-            padding-top: 50px;
+            @include h2-sobre-nosotros;
         } 
     }
-    .p1,.p2 {
-        text-align: justify;
-        padding: 30px 50px;
+    .p1,.p2, .p3 {
+        color: $white;
+        text-align: center;
+        padding: 5px 50px;
         font-family: 'Libre Franklin', sans-serif;
-        font-weight: bold;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
-.img-sobrenosotros img{
-    height: 200px;
-    margin: 200px 25px ;
-    grid-area: img-sobrenosotros;
-    &:hover{
-        @extend %transition-uno} 
-}
-.contenedor-imagenes {
-    height: 300px;
+.img-sobrenosotros{
     display: flex;
     justify-content: space-around;
+    img {
+        padding-bottom: 20px;
+        border-radius: 20px;
+        width: 500px;
+        height: 350px;
+        margin: 10px;
+        &:hover {
+           @extend %transition-tres; 
+        }
+    }
+}
+.contenedor-imagenes {
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
     background-color: $color;
     grid-area: contenedor-imagenes;
     .img-trabajadores {
-        height: 150px ;
-        display: flex;
-        padding-top: 30px;
+        padding-top: 40px;
         .img-radius {
+            margin: 10px;
+            height: 150px;
+            width: 150px;
             border-radius: 100px;
             &:hover{
                 @extend %transition-dos} 
+        }
+        .texto-empleados {
+            color: $white;
+            font-weight: bold;
+            text-align: center;
+            .p {
+                font-size: 1.3rem;
+                padding-top: 5px;
+            }
+            .p-dos {
+                font-size: 1.2rem;
+            }
         }
     }
 }
@@ -184,20 +179,58 @@ footer {
    header{
        grid-area: header;
    }
-   main {
-       height: auto;
-       grid-area: main;
+   .main-productos {
+    @include main-productos;
        .h2-main-productos {
-           padding: 10px;
-           height: 60px;
-           text-align: center;
-           background-color: rgb(52, 52, 52);
-           font-family: 'Roboto', sans-serif;
-           font-weight: bold;
-           text-transform: uppercase;
-           color: white;
+           @include h2-main-productos;
        }
        .cartas-productos {
+        padding-top: 30px;
+        display: flex;
+        justify-content: center;
+        .bg-black {
+            border-radius: 20px;
+            text-align: center;
+            &:hover{
+                box-shadow:  5px 5px 20px rgba(255, 91, 206, 0.5);
+                transform: translateY(-3%);}
+            .card-img-top{
+                border-radius: 10px;}
+            }
+            .accordion-body {
+                background-color: $color;
+                color: $white;
+            }
+            .card-title {
+                padding-top: 7px;
+            }
+            .card-text {
+                padding-top: 10px;
+                text-align: center;
+            }
+        }
+        .texto-empresa {
+            color: $white;
+            padding: 10px 80px;
+            font-size: 1rem;
+            text-align: justify;
+            font-family: 'Libre Franklin', sans-serif;
+        }
+        .texto-productos {
+            color: $white;
+            padding: 10px 80px;
+            font-size: 0.9rem;
+            text-align: justify;
+            font-family: 'Libre Franklin', sans-serif;
+       } 
+       .separacion {
+        color:$color-dos ;
+        font-weight: bold;
+        text-align: center;
+        padding-top: 5px ; 
+       } 
+    }
+    .cartas-productos-dos {
         padding-top: 30px;
         display: flex;
         justify-content: center;
@@ -206,69 +239,56 @@ footer {
             height: auto;
             text-align: center;
             &:hover{
-                box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+                box-shadow:  5px 5px 20px rgba(255, 91, 206, 0.5);
                 transform: translateY(-3%);}
             .card-img-top{
-                border-radius: 10px;
-                &:hover{
-                    @extend %transition-dos} 
+                border-radius: 10px;}
             }
+            .accordion-body {
+                background-color: $color;
+                color: $white;
             }
-        }
+            .card-title {
+                padding-top: 7px;
+            }
+            .card-text {
+                padding-top: 10px;
+                text-align: center;
+            }
     }
-   .texto-productos {
-        padding: 25px 50px;
-        font-size: 1.2rem;
-        text-align: justify;
-        font-family: 'Libre Franklin', sans-serif;
-   }  
    footer {
        @include footer;
        grid-area: footer;
    }
-
    @import "layout/media-querys/media-productos.scss";
+
+
 /*ENVIOS*/
    .contenedor-grid-envios {
        @include display-grid-envios
    }
-
    header {
        grid-area: header;
    }
-   main {
-       grid-area: main;
-   }
    .contenedor-envios {
-       background-color: rgb(218, 255, 243);
-       height: 290px;
+       @include contenedor-envios;
        h1 {
-        font-family: 'Roboto', sans-serif;
-        font-size: 2rem;
-        text-align: center;
-        padding: 25px;
-    }
-    .envios1, .envios2 {
-        font-family: 'Libre Franklin', sans-serif;
-        text-align: justify;
-        padding: 5px 25px;
-    }
-   }
-   .section-envios {
-       background-color: rgb(218, 255, 243);
-       display: flex;
-       flex-direction: column column;
-       grid-area: section-envios;
-       .section1, .section2 {
-        font-family: 'Libre Franklin', sans-serif;
-        text-align: justify;
-        padding: 5px 25px;
-    }
-    img {
-        display: flex;
-        padding: 10px;
-        height: 100px;
-    }
+        -webkit-text-stroke: 1px $webkit-text;
+        font-weight: bold;
+        color: $white;
+        padding: 70px 50px;
+       }
+       p {
+        color: $white;
+        font-size: 1.1rem;
+        padding: 10px 50px ;
+       }
+       h2 {
+        -webkit-text-stroke: 1px $webkit-text;
+        font-weight: bold;
+        color:$white;
+        padding: 40px 50px;
+       }
    }
    footer {
        @include footer;
@@ -278,7 +298,6 @@ footer {
 
 
    /*CONTACTO*/
-
    .contenedor-grid-contacto {
        @include contenedor-grid-contacto;
    }
@@ -286,69 +305,58 @@ footer {
        grid-area: header;
    }
    .formulario-contacto-principal {
-       grid-area: main;
-       background-color: antiquewhite;
-       height: auto;
-       .formulario-contacto,textarea {
-        text-align: center;
-        font-family: 'Roboto', sans-serif;
-    }   
-        legend {
-        border-radius: 9px;
-        background-color: black;
-        font-size: 2rem;
-        padding: 15px 15px;
-        color: white;
-    }
-        .formulario-contacto-style {
-            border-radius: 9px;
-            border: 2px solid black;
-            label {
-                display: flex;
-                flex-direction: column;
-                margin: 15px;
-                font-size: 1.5rem;
-            }
-            input, textarea {
-                text-align: center;
-                padding: 15px 15px;
-                background-color: rgb(212, 255, 255);
-            }
-        }
-        .formulario-contacto-buttons {
-            input {
-                background-color: rgb(127, 3, 243);
-                padding: 10px;
-                border-radius: 15px;
-                text-transform: uppercase;
-                font-size: 0.9rem;
-                color: white;
-                margin: 15px 5px;
-                &:hover {
-                    color: $hover;
+        @include fondo-contacto;
+        grid-area: main;
+        display: flex;
+        justify-content: space-around;
+        .formulario-form{
+            padding-top: 100px;
+           color: $white;
+           text-align: center; 
+           .forms {
+            display: flex;
+            flex-direction: column;
+            width: 30vw;
+                input, textarea {
+                    text-align: center;
+                    border: none;
+                    background: none;
+                    margin: 10px;
+                    padding: 10px;
+                    border-bottom: 1px solid $white;
+                    color: $white;
                 }
-            } 
+           } 
+           .formulario-contacto-buttons {
+                .input-contacto {
+                    display: flex;
+                    justify-content: center;
+                    input{
+                    @include input-form;
+                    &:hover {
+                        color: $hover;
+                            }
+                    }   
+                }  
+            }
         }
    }
    .section-contactanos {
-    grid-area: section-contactanos;
-    width: 600px;
-    background-color: antiquewhite;
-        .contactanos {
-            text-align: center;
-            padding: 25px;
-        }
-        .mapa-contacto {
-            display: flex;
-            justify-content: center;
-        }
-        .text-contacto {
-            text-align: center;
-            font-size: 1.2rem;
-            font-weight: bold;
-            padding: 5px;
-        }
-   }
+    .contactanos {
+        text-align: center;
+        color: $white;
+        padding: 25px 0px;
+        font-size: 2.1rem;
+    }
+    .text-contacto {
+        color: $white;
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: bold;
+        padding: 5px;
+    }
+}
+   
    footer {
        grid-area: footer;
        @include footer;
